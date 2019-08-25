@@ -1034,6 +1034,7 @@ namespace MLauncher.Forms
             // ManageUsersButton
             // 
             this.ManageUsersButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ManageUsersButton.Image = global::MLauncher.Properties.Resources.edit;
             this.ManageUsersButton.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.ManageUsersButton.Location = new System.Drawing.Point(513, 6);
             this.ManageUsersButton.Name = "ManageUsersButton";
