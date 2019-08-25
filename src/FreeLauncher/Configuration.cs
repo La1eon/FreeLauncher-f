@@ -69,13 +69,13 @@ namespace MLauncher
         private void LoadLocalization()
         {
             Assembly assembly = Assembly.GetExecutingAssembly();
-            string s = new StreamReader(assembly.GetManifestResourceStream("FreeLauncher.Translations.en_UK.lang.json")).ReadToEnd();
+            string s = new StreamReader(assembly.GetManifestResourceStream("MLauncher.Translations.en_UK.lang.json")).ReadToEnd();
             LocalizationsList.Add(JObject.Parse(s)["LanguageTag"].ToString(), JsonConvert.DeserializeObject<ApplicationLocalization>(s));
             if (ApplicationConfiguration.SelectedLanguage == "en_UK")
             {
                 Localization = LocalizationsList["en_UK"];
             }
-            var langsDirectory = new DirectoryInfo(Path.Combine(Application.StartupPath + @"\freelauncher-langs\"));
+            var langsDirectory = new DirectoryInfo(Path.Combine(Application.StartupPath + @"\MLauncher-langs\"));
             if (!langsDirectory.Exists)
             {
                 return;

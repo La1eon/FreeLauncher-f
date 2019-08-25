@@ -115,7 +115,6 @@ namespace MLauncher.Forms
             EnableMinecraftLogging.Checked = _cfg.EnableGameLogging;
             CloseGameOutput.Checked = _cfg.CloseTabAfterSuccessfulExitCode;
             LoadLocalization();
-
             Text = $"{ProductName} {ProductVersion}";
             AboutVersion.Text = ProductVersion;
             AppendLog($"Application: {ProductName}");
@@ -1280,7 +1279,6 @@ Please, check for your Internet configuration and restart the launcher.
             GratitudesLabel.Text = localization.GratitudesText;
             GratitudesDescLabel.Text = localization.GratitudesDescription;
             PartnersLabel.Text = localization.PartnersText;
-            MCofflineDescLabel.Text = localization.MCofflineDescription;
             CopyrightInfoLabel.Text = localization.CopyrightInfo;
 
             MainGroupBox.Text = localization.MainSettingsTitle;

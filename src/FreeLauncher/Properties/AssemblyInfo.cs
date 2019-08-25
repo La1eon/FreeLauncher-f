@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("FreeLauncher")]
+[assembly: AssemblyTitle("MLauncher")]
 [assembly: AssemblyDescription("Open Source Minecraft launcher")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Igor Popov")]
-[assembly: AssemblyProduct("FreeLauncher")]
-[assembly: AssemblyCopyright("Copyright Igor Popov© 2015-2018")]
+[assembly: AssemblyCompany("Dommilosz")]
+[assembly: AssemblyProduct("MLauncher")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
