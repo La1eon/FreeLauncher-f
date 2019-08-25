@@ -36,7 +36,7 @@ namespace MLauncher
             McDirectory = Arguments.WorkingDirectory ??
                 Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
                     ".minecraft");
-            McLauncher = Path.Combine(McDirectory, "freelauncher");
+            McLauncher = Path.Combine(McDirectory, "MLauncher");
             McVersions = Path.Combine(McDirectory, "versions");
             McLibs = Path.Combine(McDirectory, "libraries");
 

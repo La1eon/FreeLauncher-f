@@ -394,7 +394,7 @@ Please, check for your Internet configuration and restart the launcher.
                             new DirectoryInfo(PatchCombineFix.PatchCombine(_configuration.McVersions, _versionToLaunch ?? (
                                 _selectedProfile.SelectedVersion ?? GetLatestVersion(_selectedProfile)))));
                         JObject properties = new JObject {
-                            new JProperty("freelauncher", new JArray("cheeki_breeki_iv_damke"))
+                            new JProperty("MLauncher", new JArray("cheeki_breeki_iv_damke"))
                         };
                         if (_selectedProfile.ConnectionSettigs != null)
                         {
@@ -599,7 +599,7 @@ Please, check for your Internet configuration and restart the launcher.
             {
                 return;
             }
-            if (newsBrowser.Url != new Uri("http://dedepete.github.io/FreeLauncher/"))
+            if (newsBrowser.Url != new Uri("http://dedepete.github.io/MLauncher/"))
             {
                 BackWebButton.Enabled = newsBrowser.CanGoBack;
                 ForwardWebButton.Enabled = newsBrowser.CanGoForward;
@@ -724,7 +724,7 @@ Please, check for your Internet configuration and restart the launcher.
 
         private void langWikiLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start(@"https://github.com/dedepete/FreeLauncher/wiki/");
+            Process.Start(@"https://github.com/dedepete/MLauncher/wiki/");
         }
 
         private void LangDropDownList_SelectedIndexChanged(object sender, PositionChangedEventArgs e)
@@ -1495,7 +1495,7 @@ Please, check for your Internet configuration and restart the launcher.
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
                 WebClient wc = new WebClient();
                 wc.Headers.Add("User-Agent", "request");
-                GitHubRelease latest = JsonConvert.DeserializeObject<GitHubRelease>(wc.DownloadString(new Uri("https://api.github.com/repos/dedepete/FreeLauncher/releases/latest")));
+                GitHubRelease latest = JsonConvert.DeserializeObject<GitHubRelease>(wc.DownloadString(new Uri("https://api.github.com/repos/dedepete/MLauncher/releases/latest")));
                 string latestVersion = latest.Tag.Substring(1, latest.Tag.Length - 1),
                        currentVersion = Assembly.GetEntryAssembly().GetName().Version.ToString().Substring(0, Assembly.GetEntryAssembly().GetName().Version.ToString().LastIndexOf(".", StringComparison.Ordinal));
                 AppendLog($"Current version: {currentVersion}");

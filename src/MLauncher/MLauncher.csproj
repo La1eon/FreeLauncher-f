@@ -338,10 +338,10 @@
     <Error Condition="!Exists('..\..\packages\Fody.6.0.0\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Fody.6.0.0\build\Fody.targets'))" />
     <Error Condition="!Exists('..\..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props'))" />
   </Target>
-  <Import Project="..\..\packages\Fody.6.0.0\build\Fody.targets" Condition="Exists('..\..\packages\Fody.6.0.0\build\Fody.targets')" />
   <ProjectExtensions>
     <VisualStudio>
       <UserProperties ShouldAddDPIScalingManifest="False" />
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="..\..\packages\Fody.6.0.0\build\Fody.targets" Condition="Exists('..\..\packages\Fody.6.0.0\build\Fody.targets')" />
 </Project>

@@ -112,8 +112,8 @@ namespace MLauncher.Forms
             this.GratitudesLabel = new Telerik.WinControls.UI.RadLabel();
             this.LicensesPage = new Telerik.WinControls.UI.RadPageViewPage();
             this.licensePageView = new Telerik.WinControls.UI.RadPageView();
-            this.FreeLauncherLicense = new Telerik.WinControls.UI.RadPageViewPage();
-            this.FreeLauncherLicenseText = new Telerik.WinControls.UI.RadLabel();
+            this.MLauncherLicense = new Telerik.WinControls.UI.RadPageViewPage();
+            this.MLauncherLicenseText = new Telerik.WinControls.UI.RadLabel();
             this.dotMCLauncherLicense = new Telerik.WinControls.UI.RadPageViewPage();
             this.dotMCLauncherLicenseText = new Telerik.WinControls.UI.RadLabel();
             this.StatusBar = new Telerik.WinControls.UI.RadProgressBar();
@@ -186,8 +186,8 @@ namespace MLauncher.Forms
             this.LicensesPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.licensePageView)).BeginInit();
             this.licensePageView.SuspendLayout();
-            this.FreeLauncherLicense.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FreeLauncherLicenseText)).BeginInit();
+            this.MLauncherLicense.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MLauncherLicenseText)).BeginInit();
             this.dotMCLauncherLicense.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dotMCLauncherLicenseText)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBar)).BeginInit();
@@ -501,7 +501,6 @@ namespace MLauncher.Forms
             this.GetMods.Controls.Add(this.radButton1);
             this.GetMods.Controls.Add(this.radTextBox1);
             this.GetMods.Controls.Add(this.radGroupBox1);
-            this.GetMods.ItemSize = new System.Drawing.SizeF(40F, 24F);
             this.GetMods.Location = new System.Drawing.Point(5, 30);
             this.GetMods.Name = "GetMods";
             this.GetMods.Size = new System.Drawing.Size(838, 293);
@@ -584,7 +583,6 @@ namespace MLauncher.Forms
             // 
             this.radPageViewPage2.Controls.Add(this.radButton2);
             this.radPageViewPage2.Controls.Add(this.radGroupBox2);
-            this.radPageViewPage2.ItemSize = new System.Drawing.SizeF(64F, 24F);
             this.radPageViewPage2.Location = new System.Drawing.Point(5, 30);
             this.radPageViewPage2.Name = "radPageViewPage2";
             this.radPageViewPage2.Size = new System.Drawing.Size(838, 293);
@@ -643,7 +641,7 @@ namespace MLauncher.Forms
             this.AboutPageView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AboutPageView.Location = new System.Drawing.Point(0, 0);
             this.AboutPageView.Name = "AboutPageView";
-            this.AboutPageView.SelectedPage = this.AboutPageViewPage;
+            this.AboutPageView.SelectedPage = this.LicensesPage;
             this.AboutPageView.Size = new System.Drawing.Size(848, 328);
             this.AboutPageView.TabIndex = 9;
             this.AboutPageView.ThemeName = "VisualStudio2012Dark";
@@ -892,9 +890,9 @@ namespace MLauncher.Forms
             this.GratitudesDescLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.GratitudesDescLabel.Location = new System.Drawing.Point(14, 118);
             this.GratitudesDescLabel.Name = "GratitudesDescLabel";
-            this.GratitudesDescLabel.Size = new System.Drawing.Size(219, 17);
+            this.GratitudesDescLabel.Size = new System.Drawing.Size(206, 17);
             this.GratitudesDescLabel.TabIndex = 6;
-            this.GratitudesDescLabel.Text = "Dedepete - Creator of FreeLauncher";
+            this.GratitudesDescLabel.Text = "Dedepete - Creator of MLauncher";
             // 
             // GratitudesLabel
             // 
@@ -921,42 +919,44 @@ namespace MLauncher.Forms
             // 
             // licensePageView
             // 
-            this.licensePageView.Controls.Add(this.FreeLauncherLicense);
+            this.licensePageView.Controls.Add(this.MLauncherLicense);
             this.licensePageView.Controls.Add(this.dotMCLauncherLicense);
             this.licensePageView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.licensePageView.Location = new System.Drawing.Point(0, 0);
             this.licensePageView.Name = "licensePageView";
-            this.licensePageView.SelectedPage = this.FreeLauncherLicense;
+            this.licensePageView.SelectedPage = this.MLauncherLicense;
             this.licensePageView.Size = new System.Drawing.Size(838, 293);
             this.licensePageView.TabIndex = 0;
             this.licensePageView.ThemeName = "VisualStudio2012Dark";
             this.licensePageView.ViewMode = Telerik.WinControls.UI.PageViewMode.Backstage;
             ((Telerik.WinControls.UI.StripViewItemContainer)(this.licensePageView.GetChildAt(0).GetChildAt(0))).MinSize = new System.Drawing.Size(150, 0);
             // 
-            // FreeLauncherLicense
+            // MLauncherLicense
             // 
-            this.FreeLauncherLicense.Controls.Add(this.FreeLauncherLicenseText);
-            this.FreeLauncherLicense.Location = new System.Drawing.Point(155, 4);
-            this.FreeLauncherLicense.Name = "FreeLauncherLicense";
-            this.FreeLauncherLicense.Size = new System.Drawing.Size(679, 285);
-            this.FreeLauncherLicense.Text = "FreeLauncher";
+            this.MLauncherLicense.Controls.Add(this.MLauncherLicenseText);
+            this.MLauncherLicense.ItemSize = new System.Drawing.SizeF(94F, 26F);
+            this.MLauncherLicense.Location = new System.Drawing.Point(155, 4);
+            this.MLauncherLicense.Name = "MLauncherLicense";
+            this.MLauncherLicense.Size = new System.Drawing.Size(679, 285);
+            this.MLauncherLicense.Text = "FreeLauncher";
             // 
-            // FreeLauncherLicenseText
+            // MLauncherLicenseText
             // 
-            this.FreeLauncherLicenseText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FreeLauncherLicenseText.Location = new System.Drawing.Point(0, 0);
-            this.FreeLauncherLicenseText.Name = "FreeLauncherLicenseText";
-            this.FreeLauncherLicenseText.Size = new System.Drawing.Size(679, 285);
-            this.FreeLauncherLicenseText.TabIndex = 2;
-            this.FreeLauncherLicenseText.Text = resources.GetString("FreeLauncherLicenseText.Text");
-            this.FreeLauncherLicenseText.ThemeName = "VisualStudio2012Dark";
-            ((Telerik.WinControls.UI.RadLabelElement)(this.FreeLauncherLicenseText.GetChildAt(0))).Text = resources.GetString("resource.Text");
-            ((Telerik.WinControls.Primitives.FillPrimitive)(this.FreeLauncherLicenseText.GetChildAt(0).GetChildAt(0))).BackColor = System.Drawing.Color.Transparent;
+            this.MLauncherLicenseText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MLauncherLicenseText.Location = new System.Drawing.Point(0, 0);
+            this.MLauncherLicenseText.Name = "MLauncherLicenseText";
+            this.MLauncherLicenseText.Size = new System.Drawing.Size(679, 285);
+            this.MLauncherLicenseText.TabIndex = 2;
+            this.MLauncherLicenseText.Text = resources.GetString("MLauncherLicenseText.Text");
+            this.MLauncherLicenseText.ThemeName = "VisualStudio2012Dark";
+            ((Telerik.WinControls.UI.RadLabelElement)(this.MLauncherLicenseText.GetChildAt(0))).Text = resources.GetString("resource.Text");
+            ((Telerik.WinControls.Primitives.FillPrimitive)(this.MLauncherLicenseText.GetChildAt(0).GetChildAt(0))).BackColor = System.Drawing.Color.Transparent;
             // 
             // dotMCLauncherLicense
             // 
             this.dotMCLauncherLicense.AutoScroll = true;
             this.dotMCLauncherLicense.Controls.Add(this.dotMCLauncherLicenseText);
+            this.dotMCLauncherLicense.ItemSize = new System.Drawing.SizeF(94F, 26F);
             this.dotMCLauncherLicense.Location = new System.Drawing.Point(155, 4);
             this.dotMCLauncherLicense.Name = "dotMCLauncherLicense";
             this.dotMCLauncherLicense.Size = new System.Drawing.Size(679, 285);
@@ -1209,9 +1209,9 @@ namespace MLauncher.Forms
             this.LicensesPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.licensePageView)).EndInit();
             this.licensePageView.ResumeLayout(false);
-            this.FreeLauncherLicense.ResumeLayout(false);
-            this.FreeLauncherLicense.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FreeLauncherLicenseText)).EndInit();
+            this.MLauncherLicense.ResumeLayout(false);
+            this.MLauncherLicense.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MLauncherLicenseText)).EndInit();
             this.dotMCLauncherLicense.ResumeLayout(false);
             this.dotMCLauncherLicense.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dotMCLauncherLicenseText)).EndInit();
@@ -1261,7 +1261,7 @@ namespace MLauncher.Forms
         private RadPageViewPage LicensesPage;
         private RadPageView licensePageView;
         private RadPageViewPage dotMCLauncherLicense;
-        private RadPageViewPage FreeLauncherLicense;
+        private RadPageViewPage MLauncherLicense;
         private RadLabel dotMCLauncherLicenseText;
         private RadProgressBar StatusBar;
         private RadPanel ConsoleOptionsPanel;
@@ -1276,7 +1276,7 @@ namespace MLauncher.Forms
         public RadCheckBox DownloadAssetsBox;
         private Label CopyrightInfoLabel;
         private LinkLabel langWikiLink;
-        private RadLabel FreeLauncherLicenseText;
+        private RadLabel MLauncherLicenseText;
         private RadPageViewPage EditProfiles;
         private RadListView profilesListView;
         public RadCheckBox CheckUpdatesCheckBox;

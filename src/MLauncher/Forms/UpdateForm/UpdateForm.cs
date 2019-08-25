@@ -19,7 +19,7 @@ namespace MLauncher.Forms
 
         private void goButton_Click(object sender, EventArgs e)
         {
-            Process.Start((supportCheckBox.Checked ? "http://adf.ly/2268996/" : string.Empty) + @"https://github.com/dedepete/FreeLauncher/releases/latest");
+            Process.Start((supportCheckBox.Checked ? "http://adf.ly/2268996/" : string.Empty) + @"https://github.com/dedepete/MLauncher/releases/latest");
         }
 
         private void LoadLocalization()
