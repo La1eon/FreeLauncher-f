@@ -17,26 +17,3 @@ before_build:
 
 build:
   verbosity: normal
-
-before_deploy:
-- ps: >-
-    if ($env:APPVEYOR_REPO_TAG -eq "true") {
-      Push-AppveyorArtifact .\src\MLauncher\bin\$env:CONFIGURATION\MLauncher.exe -DeploymentName deployment
-      Push-AppveyorArtifact .\src\MLauncher\bin\$env:CONFIGURATION\MLauncher.zip -DeploymentName deployment
-    }
-
-artifacts:
-- path: \src\MLauncher\bin\$(CONFIGURATION)\MLauncher.exe
-
-deploy:
-  release: myproduct-v$(appveyor_build_version)
-  description: 'Release description'
-  provider: GitHub
-  auth_token:
-    secure: 12cf9485d2d3b2955606d67eae5a6bf78861c65d # your encrypted token from GitHub
-  artifact: /.*\.nupkg/            # upload all NuGet packages to release assets
-  draft: false
-  prerelease: false
-  on:
-    branch: master                 # release from master branch only
-    APPVEYOR_REPO_TAG: true        # deploy on tag push only
