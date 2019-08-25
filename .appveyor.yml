@@ -33,7 +33,7 @@ deploy:
   description: 'Release description'
   provider: GitHub
   auth_token:
-    secure: 0c047019ba698391f907bc6f2808c0095c7c3111 # your encrypted token from GitHub
+    secure: 12cf9485d2d3b2955606d67eae5a6bf78861c65d # your encrypted token from GitHub
   artifact: /.*\.nupkg/            # upload all NuGet packages to release assets
   draft: false
   prerelease: false
