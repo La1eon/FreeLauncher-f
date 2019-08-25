@@ -1535,55 +1535,57 @@ Please, check for your Internet configuration and restart the launcher.
 
         private void RadButton1_Click(object sender, EventArgs e)
         {
-
-            string searchQuery = radTextBox1.Text;
-            if (!string.IsNullOrEmpty(searchQuery))
+            void GetMods(string searchQuery)
             {
-                HtmlAgilityPack.HtmlWeb htmlWeb = new HtmlAgilityPack.HtmlWeb();
-                // unpopulate listview
-                imageList1.Images.Clear();
-                radListView2.Items.Clear();
-                // get data from web
-                var page = htmlWeb.Load("https://www.curseforge.com/minecraft/mc-mods/search?search=" + Uri.EscapeDataString(searchQuery));
-                var imageNodes = page.DocumentNode.SelectNodes("/html/body/div[1]/main/div[1]/div[3]/ul/div/div/div/div[1]/div[1]/div/a/img");
-                var linkNodes = page.DocumentNode.SelectNodes("/html/body/div[1]/main/div[1]/div[3]/ul/div/div/div/div[2]/div[1]/a[1]");
 
-                // check if there are any search results
-                if (imageNodes != null)
+                if (!string.IsNullOrEmpty(searchQuery))
                 {
+                    HtmlAgilityPack.HtmlWeb htmlWeb = new HtmlAgilityPack.HtmlWeb();
+                    // unpopulate listview
+                    imageList1.Images.Clear();
+                    radListView2.Items.Clear();
+                    // get data from web
+                    var page = htmlWeb.Load("https://www.curseforge.com/minecraft/mc-mods/search?search=" + Uri.EscapeDataString(searchQuery));
+                    var imageNodes = page.DocumentNode.SelectNodes("/html/body/div[1]/main/div[1]/div[3]/ul/div/div/div/div[1]/div[1]/div/a/img");
+                    var linkNodes = page.DocumentNode.SelectNodes("/html/body/div[1]/main/div[1]/div[3]/ul/div/div/div/div[2]/div[1]/a[1]");
 
-                    // populate listview
-                    for (int i = 0; i < imageNodes.Count; i++)
+                    // check if there are any search results
+                    if (imageNodes != null)
                     {
-                        var imageNode = imageNodes[i];
-                        var url = imageNode.Attributes["src"].Value;
-                        // download associated image
-                        using (var wc = new WebClient())
+
+                        // populate listview
+                        for (int i = 0; i < imageNodes.Count; i++)
                         {
-                            using (var ms = new MemoryStream(wc.DownloadData(url)))
+                            var imageNode = imageNodes[i];
+                            var url = imageNode.Attributes["src"].Value;
+                            // download associated image
+                            using (var wc = new WebClient())
                             {
-                                using (var img = Image.FromStream(ms))
+                                using (var ms = new MemoryStream(wc.DownloadData(url)))
                                 {
-                                    // add items
-                                    imageList1.Images.Add(i.ToString(), img);
-                                    var linkNode = linkNodes[i];
-                                    var listViewItem = new ListViewItem(WebUtility.HtmlDecode(linkNode.InnerText), i);
-                                    var listViewItem2 = new RadListDataItem(WebUtility.HtmlDecode(linkNode.InnerText), i.ToString());
-                                    listViewItem.ToolTipText = linkNode.Attributes["href"].Value;
-                                    radListView2.Items.Add(listViewItem2);
-                                    radListView2.Items[i].ImageIndex = i;
+                                    using (var img = Image.FromStream(ms))
+                                    {
+                                        // add items
+                                        imageList1.Images.Add(i.ToString(), img);
+                                        var linkNode = linkNodes[i];
+                                        var listViewItem = new ListViewItem(WebUtility.HtmlDecode(linkNode.InnerText), i);
+                                        var listViewItem2 = new RadListDataItem(WebUtility.HtmlDecode(linkNode.InnerText), i.ToString());
+                                        listViewItem.ToolTipText = linkNode.Attributes["href"].Value;
+                                        radListView2.Items.Add(listViewItem2);
+                                        radListView2.Items[i].ImageIndex = i;
+                                    }
                                 }
                             }
                         }
-                    }
 
-                }
-                else
-                {
-                    MessageBox.Show("No search results for query: \"" + searchQuery + "\"", "Curseforge Scraper", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No search results for query: \"" + searchQuery + "\"", "Curseforge Scraper", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
-
+            GetMods(radTextBox1.Text);
             radListView2.SelectedIndex = 0;
         }
     }
