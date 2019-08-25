@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace FreeLauncher
+namespace MLauncher
 {
     public class GitHubRelease
     {

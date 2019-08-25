@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace FreeLauncher.Forms
+namespace MLauncher.Forms
 {
     public partial class UpdateForm : Telerik.WinControls.UI.RadForm
     {

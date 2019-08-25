@@ -1,4 +1,4 @@
-﻿namespace FreeLauncher
+﻿namespace MLauncher
 {
     public class ApplicationLocalization
     {
@@ -37,7 +37,7 @@
         public string LastUpdatedHeader { get; set; } = "Последнее обновление";
         public string AssetsIndexHeader { get; set; } = "Индекс ресурсов";
         public string DependencyHeader { get; set; } = "Зависит от";
-        
+
         public string Restore { get; set; } = "Восстановить";
         public string OpenLocation { get; set; } = "Открыть расположение";
         public string DeleteVersion { get; set; } = "Удалить сборку";

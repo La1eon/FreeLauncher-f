@@ -1,7 +1,8 @@
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace dotMCLauncher.Profiling.V2 {
+namespace dotMCLauncher.Profiling.V2
+{
     public class AuthenticationEntry : Serializable
     {
         [JsonProperty("accessToken")]

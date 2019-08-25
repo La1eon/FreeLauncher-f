@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using Telerik.WinControls.Themes;
 using Telerik.WinControls.UI;
 
-namespace FreeLauncher.Forms
+namespace MLauncher.Forms
 {
     partial class LauncherForm
     {
@@ -33,21 +33,34 @@ namespace FreeLauncher.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn1 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 0", "Версия");
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn2 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 1", "Тип");
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn3 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 3", "Дата выхода");
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn4 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 4", "Последнего обновление");
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn5 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 5", "Индекс ресурсов");
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn6 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 2", "Зависимость");
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn7 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 1", "Идентификатор");
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn8 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 0", "Название");
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn9 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 2", "Версия");
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn10 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 3", "Конфигурация релизов");
-            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn11 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 4", "Видимость лаунчера");
+            this.components = new System.ComponentModel.Container();
+            Telerik.WinControls.UI.ListViewDataItem listViewDataItem5 = new Telerik.WinControls.UI.ListViewDataItem("ListViewItem 1");
+            Telerik.WinControls.UI.ListViewDataItem listViewDataItem6 = new Telerik.WinControls.UI.ListViewDataItem("ListViewItem 1");
+            Telerik.WinControls.UI.ListViewDataItem listViewDataItem7 = new Telerik.WinControls.UI.ListViewDataItem("ListViewItem 2");
+            Telerik.WinControls.UI.ListViewDataItem listViewDataItem8 = new Telerik.WinControls.UI.ListViewDataItem("ListViewItem 3");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn12 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 0", "Version");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn13 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 1", "Type");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn14 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 3", "Relase Date");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn15 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 4", "Last Update");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn16 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 5", "Assets Index");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn17 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 2", "Inherits From");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn1 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 1", "ID");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn2 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 0", "Name");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn3 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 2", "Version");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn4 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 3", "Relase Configuration");
+            Telerik.WinControls.UI.ListViewDetailColumn listViewDetailColumn5 = new Telerik.WinControls.UI.ListViewDetailColumn("Column 4", "Launcher Visibility");
+            Telerik.WinControls.UI.RadListDataItem radListDataItem8 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem9 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem10 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LauncherForm));
             this.vs12theme = new Telerik.WinControls.Themes.VisualStudio2012DarkTheme();
             this.mainPageView = new Telerik.WinControls.UI.RadPageView();
+            this.Hotbar = new Telerik.WinControls.UI.RadPageViewPage();
+            this.radListView1 = new Telerik.WinControls.UI.RadListView();
             this.News = new Telerik.WinControls.UI.RadPageViewPage();
             this.newsBrowser = new System.Windows.Forms.WebBrowser();
             this.navBar = new Telerik.WinControls.UI.RadPanel();
@@ -62,6 +75,20 @@ namespace FreeLauncher.Forms
             this.versionsListView = new Telerik.WinControls.UI.RadListView();
             this.EditProfiles = new Telerik.WinControls.UI.RadPageViewPage();
             this.profilesListView = new Telerik.WinControls.UI.RadListView();
+            this.Mods = new Telerik.WinControls.UI.RadPageViewPage();
+            this.radPageView1 = new Telerik.WinControls.UI.RadPageView();
+            this.GetMods = new Telerik.WinControls.UI.RadPageViewPage();
+            this.radDropDownList1 = new Telerik.WinControls.UI.RadDropDownList();
+            this.radListView2 = new Telerik.WinControls.UI.RadListView();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.radButton1 = new Telerik.WinControls.UI.RadButton();
+            this.radTextBox1 = new Telerik.WinControls.UI.RadTextBox();
+            this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.radListControl2 = new Telerik.WinControls.UI.RadListControl();
+            this.radPageViewPage2 = new Telerik.WinControls.UI.RadPageViewPage();
+            this.radButton2 = new Telerik.WinControls.UI.RadButton();
+            this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
+            this.radListControl1 = new Telerik.WinControls.UI.RadListControl();
             this.AboutPage = new Telerik.WinControls.UI.RadPageViewPage();
             this.AboutPageView = new Telerik.WinControls.UI.RadPageView();
             this.AboutPageViewPage = new Telerik.WinControls.UI.RadPageViewPage();
@@ -92,6 +119,7 @@ namespace FreeLauncher.Forms
             this.dotMCLauncherLicense = new Telerik.WinControls.UI.RadPageViewPage();
             this.dotMCLauncherLicenseText = new Telerik.WinControls.UI.RadLabel();
             this.StatusBar = new Telerik.WinControls.UI.RadProgressBar();
+            this.langWikiLink = new System.Windows.Forms.LinkLabel();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.DeleteProfileButton = new Telerik.WinControls.UI.RadButton();
             this.ManageUsersButton = new Telerik.WinControls.UI.RadButton();
@@ -102,9 +130,10 @@ namespace FreeLauncher.Forms
             this.profilesDropDownBox = new Telerik.WinControls.UI.RadDropDownList();
             this.EditProfileButton = new Telerik.WinControls.UI.RadButton();
             this.AddProfile = new Telerik.WinControls.UI.RadButton();
-            this.langWikiLink = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.mainPageView)).BeginInit();
             this.mainPageView.SuspendLayout();
+            this.Hotbar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radListView1)).BeginInit();
             this.News.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBar)).BeginInit();
             this.navBar.SuspendLayout();
@@ -119,6 +148,22 @@ namespace FreeLauncher.Forms
             ((System.ComponentModel.ISupportInitialize)(this.versionsListView)).BeginInit();
             this.EditProfiles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profilesListView)).BeginInit();
+            this.Mods.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
+            this.radPageView1.SuspendLayout();
+            this.GetMods.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radDropDownList1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radListView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
+            this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radListControl2)).BeginInit();
+            this.radPageViewPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
+            this.radGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radListControl1)).BeginInit();
             this.AboutPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AboutPageView)).BeginInit();
             this.AboutPageView.SuspendLayout();
@@ -163,29 +208,72 @@ namespace FreeLauncher.Forms
             // 
             // mainPageView
             // 
+            this.mainPageView.Controls.Add(this.Hotbar);
             this.mainPageView.Controls.Add(this.News);
             this.mainPageView.Controls.Add(this.ConsolePage);
             this.mainPageView.Controls.Add(this.EditVersions);
             this.mainPageView.Controls.Add(this.EditProfiles);
+            this.mainPageView.Controls.Add(this.Mods);
             this.mainPageView.Controls.Add(this.AboutPage);
             this.mainPageView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPageView.Location = new System.Drawing.Point(0, 0);
             this.mainPageView.Name = "mainPageView";
-            this.mainPageView.SelectedPage = this.News;
+            this.mainPageView.SelectedPage = this.Mods;
             this.mainPageView.Size = new System.Drawing.Size(858, 363);
             this.mainPageView.TabIndex = 2;
             this.mainPageView.ThemeName = "VisualStudio2012Dark";
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.mainPageView.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.None;
             // 
+            // Hotbar
+            // 
+            this.Hotbar.Controls.Add(this.radListView1);
+            this.Hotbar.ItemSize = new System.Drawing.SizeF(55F, 24F);
+            this.Hotbar.Location = new System.Drawing.Point(5, 30);
+            this.Hotbar.Name = "Hotbar";
+            this.Hotbar.Size = new System.Drawing.Size(848, 328);
+            this.Hotbar.Text = "HOTBAR";
+            // 
+            // radListView1
+            // 
+            this.radListView1.AllowColumnReorder = false;
+            this.radListView1.AllowColumnResize = false;
+            this.radListView1.AllowEdit = false;
+            this.radListView1.AllowRemove = false;
+            this.radListView1.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.radListView1.FullRowSelect = false;
+            listViewDataItem5.BorderColor = System.Drawing.Color.CornflowerBlue;
+            listViewDataItem5.Text = "ListViewItem 1";
+            listViewDataItem6.BorderColor = System.Drawing.Color.CornflowerBlue;
+            listViewDataItem6.Text = "ListViewItem 1";
+            listViewDataItem7.BorderColor = System.Drawing.Color.CornflowerBlue;
+            listViewDataItem7.Text = "ListViewItem 2";
+            listViewDataItem8.BorderColor = System.Drawing.Color.CornflowerBlue;
+            listViewDataItem8.Text = "ListViewItem 3";
+            this.radListView1.Items.AddRange(new Telerik.WinControls.UI.ListViewDataItem[] {
+            listViewDataItem5,
+            listViewDataItem6,
+            listViewDataItem7,
+            listViewDataItem8});
+            this.radListView1.ItemSize = new System.Drawing.Size(200, 64);
+            this.radListView1.Location = new System.Drawing.Point(22, 9);
+            this.radListView1.Name = "radListView1";
+            this.radListView1.Size = new System.Drawing.Size(823, 322);
+            this.radListView1.TabIndex = 0;
+            this.radListView1.ThemeName = "VisualStudio2012Dark";
+            this.radListView1.ViewType = Telerik.WinControls.UI.ListViewType.IconsView;
+            this.radListView1.SelectedIndexChanged += new System.EventHandler(this.RadListView1_SelectedIndexChanged);
+            this.radListView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RadListView1_MouseClick);
+            this.radListView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.RadListView1_MouseDoubleClick);
+            // 
             // News
             // 
             this.News.Controls.Add(this.newsBrowser);
             this.News.Controls.Add(this.navBar);
-            this.News.ItemSize = new System.Drawing.SizeF(65F, 24F);
+            this.News.ItemSize = new System.Drawing.SizeF(43F, 24F);
             this.News.Location = new System.Drawing.Point(5, 30);
             this.News.Name = "News";
             this.News.Size = new System.Drawing.Size(848, 328);
-            this.News.Text = "НОВОСТИ";
+            this.News.Text = "NEWS";
             // 
             // newsBrowser
             // 
@@ -238,11 +326,11 @@ namespace FreeLauncher.Forms
             // 
             this.ConsolePage.Controls.Add(this.logBox);
             this.ConsolePage.Controls.Add(this.ConsoleOptionsPanel);
-            this.ConsolePage.ItemSize = new System.Drawing.SizeF(65F, 24F);
+            this.ConsolePage.ItemSize = new System.Drawing.SizeF(62F, 24F);
             this.ConsolePage.Location = new System.Drawing.Point(5, 30);
             this.ConsolePage.Name = "ConsolePage";
             this.ConsolePage.Size = new System.Drawing.Size(848, 328);
-            this.ConsolePage.Text = "КОНСОЛЬ";
+            this.ConsolePage.Text = "CONSOLE";
             // 
             // logBox
             // 
@@ -275,7 +363,7 @@ namespace FreeLauncher.Forms
             this.SetToClipboardButton.Name = "SetToClipboardButton";
             this.SetToClipboardButton.Size = new System.Drawing.Size(131, 23);
             this.SetToClipboardButton.TabIndex = 1;
-            this.SetToClipboardButton.Text = "Скопировать в буфер";
+            this.SetToClipboardButton.Text = "Copy To Clipboard";
             this.SetToClipboardButton.ThemeName = "VisualStudio2012Dark";
             this.SetToClipboardButton.Click += new System.EventHandler(this.SetToClipboardButton_Click);
             // 
@@ -292,11 +380,11 @@ namespace FreeLauncher.Forms
             // EditVersions
             // 
             this.EditVersions.Controls.Add(this.versionsListView);
-            this.EditVersions.ItemSize = new System.Drawing.SizeF(145F, 24F);
+            this.EditVersions.ItemSize = new System.Drawing.SizeF(123F, 24F);
             this.EditVersions.Location = new System.Drawing.Point(5, 30);
             this.EditVersions.Name = "EditVersions";
             this.EditVersions.Size = new System.Drawing.Size(848, 328);
-            this.EditVersions.Text = "УПРАВЛЕНИЕ ВЕРСИЯМИ";
+            this.EditVersions.Text = "BUILDS MANAGMENT";
             // 
             // versionsListView
             // 
@@ -306,25 +394,25 @@ namespace FreeLauncher.Forms
             this.versionsListView.AllowRemove = false;
             this.versionsListView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.versionsListView.CheckOnClickMode = Telerik.WinControls.UI.CheckOnClickMode.FirstClick;
-            listViewDetailColumn1.HeaderText = "Версия";
-            listViewDetailColumn1.Width = 150F;
-            listViewDetailColumn2.HeaderText = "Тип";
-            listViewDetailColumn2.Width = 100F;
-            listViewDetailColumn3.HeaderText = "Дата выхода";
-            listViewDetailColumn3.Width = 150F;
-            listViewDetailColumn4.HeaderText = "Последнего обновление";
-            listViewDetailColumn4.Width = 150F;
-            listViewDetailColumn5.HeaderText = "Индекс ресурсов";
-            listViewDetailColumn5.Width = 120F;
-            listViewDetailColumn6.HeaderText = "Зависимость";
-            listViewDetailColumn6.Width = 100F;
+            listViewDetailColumn12.HeaderText = "Version";
+            listViewDetailColumn12.Width = 150F;
+            listViewDetailColumn13.HeaderText = "Type";
+            listViewDetailColumn13.Width = 100F;
+            listViewDetailColumn14.HeaderText = "Relase Date";
+            listViewDetailColumn14.Width = 150F;
+            listViewDetailColumn15.HeaderText = "Last Update";
+            listViewDetailColumn15.Width = 150F;
+            listViewDetailColumn16.HeaderText = "Assets Index";
+            listViewDetailColumn16.Width = 120F;
+            listViewDetailColumn17.HeaderText = "Inherits From";
+            listViewDetailColumn17.Width = 100F;
             this.versionsListView.Columns.AddRange(new Telerik.WinControls.UI.ListViewDetailColumn[] {
-            listViewDetailColumn1,
-            listViewDetailColumn2,
-            listViewDetailColumn3,
-            listViewDetailColumn4,
-            listViewDetailColumn5,
-            listViewDetailColumn6});
+            listViewDetailColumn12,
+            listViewDetailColumn13,
+            listViewDetailColumn14,
+            listViewDetailColumn15,
+            listViewDetailColumn16,
+            listViewDetailColumn17});
             this.versionsListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.versionsListView.EnableColumnSort = true;
             this.versionsListView.EnableFiltering = true;
@@ -345,11 +433,11 @@ namespace FreeLauncher.Forms
             // EditProfiles
             // 
             this.EditProfiles.Controls.Add(this.profilesListView);
-            this.EditProfiles.ItemSize = new System.Drawing.SizeF(158F, 24F);
+            this.EditProfiles.ItemSize = new System.Drawing.SizeF(134F, 24F);
             this.EditProfiles.Location = new System.Drawing.Point(5, 30);
             this.EditProfiles.Name = "EditProfiles";
             this.EditProfiles.Size = new System.Drawing.Size(848, 328);
-            this.EditProfiles.Text = "УПРАВЛЕНИЕ ПРОФИЛЯМИ";
+            this.EditProfiles.Text = "PROFILES MANAGMENT";
             // 
             // profilesListView
             // 
@@ -359,17 +447,17 @@ namespace FreeLauncher.Forms
             this.profilesListView.AllowRemove = false;
             this.profilesListView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.profilesListView.CheckOnClickMode = Telerik.WinControls.UI.CheckOnClickMode.FirstClick;
-            listViewDetailColumn7.HeaderText = "Идентификатор";
-            listViewDetailColumn8.HeaderText = "Название";
-            listViewDetailColumn9.HeaderText = "Версия";
-            listViewDetailColumn10.HeaderText = "Конфигурация релизов";
-            listViewDetailColumn11.HeaderText = "Видимость лаунчера";
+            listViewDetailColumn1.HeaderText = "ID";
+            listViewDetailColumn2.HeaderText = "Name";
+            listViewDetailColumn3.HeaderText = "Version";
+            listViewDetailColumn4.HeaderText = "Relase Configuration";
+            listViewDetailColumn5.HeaderText = "Launcher Visibility";
             this.profilesListView.Columns.AddRange(new Telerik.WinControls.UI.ListViewDetailColumn[] {
-            listViewDetailColumn7,
-            listViewDetailColumn8,
-            listViewDetailColumn9,
-            listViewDetailColumn10,
-            listViewDetailColumn11});
+            listViewDetailColumn1,
+            listViewDetailColumn2,
+            listViewDetailColumn3,
+            listViewDetailColumn4,
+            listViewDetailColumn5});
             this.profilesListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profilesListView.EnableColumnSort = true;
             this.profilesListView.EnableFiltering = true;
@@ -386,14 +474,167 @@ namespace FreeLauncher.Forms
             this.profilesListView.ViewType = Telerik.WinControls.UI.ListViewType.DetailsView;
             this.profilesListView.ItemMouseClick += new Telerik.WinControls.UI.ListViewItemEventHandler(this.profilesListView_ItemMouseClick);
             // 
+            // Mods
+            // 
+            this.Mods.Controls.Add(this.radPageView1);
+            this.Mods.ItemSize = new System.Drawing.SizeF(75F, 24F);
+            this.Mods.Location = new System.Drawing.Point(5, 30);
+            this.Mods.Name = "Mods";
+            this.Mods.Size = new System.Drawing.Size(848, 328);
+            this.Mods.Text = "MODS [WIP]";
+            // 
+            // radPageView1
+            // 
+            this.radPageView1.Controls.Add(this.GetMods);
+            this.radPageView1.Controls.Add(this.radPageViewPage2);
+            this.radPageView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radPageView1.Location = new System.Drawing.Point(0, 0);
+            this.radPageView1.Name = "radPageView1";
+            this.radPageView1.SelectedPage = this.GetMods;
+            this.radPageView1.Size = new System.Drawing.Size(848, 328);
+            this.radPageView1.TabIndex = 3;
+            this.radPageView1.ThemeName = "VisualStudio2012Dark";
+            ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.None;
+            // 
+            // GetMods
+            // 
+            this.GetMods.Controls.Add(this.radDropDownList1);
+            this.GetMods.Controls.Add(this.radListView2);
+            this.GetMods.Controls.Add(this.radButton1);
+            this.GetMods.Controls.Add(this.radTextBox1);
+            this.GetMods.Controls.Add(this.radGroupBox1);
+            this.GetMods.Location = new System.Drawing.Point(5, 30);
+            this.GetMods.Name = "GetMods";
+            this.GetMods.Size = new System.Drawing.Size(838, 293);
+            this.GetMods.Text = "Mods";
+            // 
+            // radDropDownList1
+            // 
+            this.radDropDownList1.Location = new System.Drawing.Point(189, 2);
+            this.radDropDownList1.Name = "radDropDownList1";
+            this.radDropDownList1.NullText = "Select Modpack";
+            this.radDropDownList1.Size = new System.Drawing.Size(125, 24);
+            this.radDropDownList1.TabIndex = 0;
+            this.radDropDownList1.ThemeName = "VisualStudio2012Dark";
+            // 
+            // radListView2
+            // 
+            this.radListView2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.radListView2.ImageList = this.imageList1;
+            this.radListView2.ItemSize = new System.Drawing.Size(200, 75);
+            this.radListView2.Location = new System.Drawing.Point(183, 33);
+            this.radListView2.Name = "radListView2";
+            this.radListView2.Size = new System.Drawing.Size(655, 260);
+            this.radListView2.TabIndex = 13;
+            this.radListView2.ThemeName = "VisualStudio2012Dark";
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(64, 64);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // radButton1
+            // 
+            this.radButton1.Location = new System.Drawing.Point(506, 1);
+            this.radButton1.Name = "radButton1";
+            this.radButton1.Size = new System.Drawing.Size(50, 24);
+            this.radButton1.TabIndex = 12;
+            this.radButton1.Text = "Search";
+            this.radButton1.ThemeName = "VisualStudio2012Dark";
+            this.radButton1.Click += new System.EventHandler(this.RadButton1_Click);
+            // 
+            // radTextBox1
+            // 
+            this.radTextBox1.Location = new System.Drawing.Point(320, 1);
+            this.radTextBox1.Name = "radTextBox1";
+            this.radTextBox1.NullText = "Search";
+            this.radTextBox1.Size = new System.Drawing.Size(180, 24);
+            this.radTextBox1.TabIndex = 10;
+            this.radTextBox1.ThemeName = "VisualStudio2012Dark";
+            // 
+            // radGroupBox1
+            // 
+            this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.Controls.Add(this.radListControl2);
+            this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radGroupBox1.HeaderText = "Installed Mods";
+            this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
+            this.radGroupBox1.Name = "radGroupBox1";
+            this.radGroupBox1.Size = new System.Drawing.Size(183, 293);
+            this.radGroupBox1.TabIndex = 11;
+            this.radGroupBox1.Text = "Installed Mods";
+            this.radGroupBox1.ThemeName = "VisualStudio2012Dark";
+            // 
+            // radListControl2
+            // 
+            this.radListControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            radListDataItem8.Text = "Optifine xD";
+            radListDataItem9.Text = "No Minecraft Mod";
+            radListDataItem10.Text = "Do you really read this?";
+            this.radListControl2.Items.Add(radListDataItem8);
+            this.radListControl2.Items.Add(radListDataItem9);
+            this.radListControl2.Items.Add(radListDataItem10);
+            this.radListControl2.Location = new System.Drawing.Point(2, 18);
+            this.radListControl2.Name = "radListControl2";
+            this.radListControl2.Size = new System.Drawing.Size(179, 273);
+            this.radListControl2.TabIndex = 2;
+            this.radListControl2.ThemeName = "VisualStudio2012Dark";
+            // 
+            // radPageViewPage2
+            // 
+            this.radPageViewPage2.Controls.Add(this.radButton2);
+            this.radPageViewPage2.Controls.Add(this.radGroupBox2);
+            this.radPageViewPage2.Location = new System.Drawing.Point(5, 30);
+            this.radPageViewPage2.Name = "radPageViewPage2";
+            this.radPageViewPage2.Size = new System.Drawing.Size(838, 293);
+            this.radPageViewPage2.Text = "Modpacks";
+            // 
+            // radButton2
+            // 
+            this.radButton2.Location = new System.Drawing.Point(206, 0);
+            this.radButton2.Name = "radButton2";
+            this.radButton2.Size = new System.Drawing.Size(110, 24);
+            this.radButton2.TabIndex = 13;
+            this.radButton2.Text = "Create New";
+            this.radButton2.ThemeName = "VisualStudio2012Dark";
+            // 
+            // radGroupBox2
+            // 
+            this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox2.Controls.Add(this.radListControl1);
+            this.radGroupBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radGroupBox2.HeaderText = "Installed Modpacks";
+            this.radGroupBox2.Location = new System.Drawing.Point(0, 0);
+            this.radGroupBox2.Name = "radGroupBox2";
+            this.radGroupBox2.Size = new System.Drawing.Size(200, 293);
+            this.radGroupBox2.TabIndex = 12;
+            this.radGroupBox2.Text = "Installed Modpacks";
+            this.radGroupBox2.ThemeName = "VisualStudio2012Dark";
+            // 
+            // radListControl1
+            // 
+            this.radListControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            radListDataItem1.Text = "Optifine xD";
+            radListDataItem2.Text = "No Minecraft Mod";
+            radListDataItem3.Text = "Do you really read this?";
+            this.radListControl1.Items.Add(radListDataItem1);
+            this.radListControl1.Items.Add(radListDataItem2);
+            this.radListControl1.Items.Add(radListDataItem3);
+            this.radListControl1.Location = new System.Drawing.Point(2, 18);
+            this.radListControl1.Name = "radListControl1";
+            this.radListControl1.Size = new System.Drawing.Size(196, 273);
+            this.radListControl1.TabIndex = 2;
+            this.radListControl1.ThemeName = "VisualStudio2012Dark";
+            // 
             // AboutPage
             // 
             this.AboutPage.Controls.Add(this.AboutPageView);
-            this.AboutPage.ItemSize = new System.Drawing.SizeF(79F, 24F);
+            this.AboutPage.ItemSize = new System.Drawing.SizeF(48F, 24F);
             this.AboutPage.Location = new System.Drawing.Point(5, 30);
             this.AboutPage.Name = "AboutPage";
             this.AboutPage.Size = new System.Drawing.Size(848, 328);
-            this.AboutPage.Text = "О ЛАУНЧЕРЕ";
+            this.AboutPage.Text = "ABOUT";
             // 
             // AboutPageView
             // 
@@ -417,7 +658,7 @@ namespace FreeLauncher.Forms
             this.AboutPageViewPage.Location = new System.Drawing.Point(5, 5);
             this.AboutPageViewPage.Name = "AboutPageViewPage";
             this.AboutPageViewPage.Size = new System.Drawing.Size(838, 293);
-            this.AboutPageViewPage.Text = "О ЛАУНЧЕРЕ";
+            this.AboutPageViewPage.Text = "ABOUT";
             // 
             // radScrollablePanel2
             // 
@@ -443,7 +684,6 @@ namespace FreeLauncher.Forms
             this.radScrollablePanel2.PanelContainer.Size = new System.Drawing.Size(836, 291);
             this.radScrollablePanel2.Size = new System.Drawing.Size(838, 293);
             this.radScrollablePanel2.TabIndex = 9;
-            this.radScrollablePanel2.Text = "radScrollablePanel2";
             this.radScrollablePanel2.ThemeName = "VisualStudio2012Dark";
             // 
             // CopyrightInfoLabel
@@ -454,10 +694,10 @@ namespace FreeLauncher.Forms
             this.CopyrightInfoLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.CopyrightInfoLabel.Location = new System.Drawing.Point(2, 254);
             this.CopyrightInfoLabel.Name = "CopyrightInfoLabel";
-            this.CopyrightInfoLabel.Size = new System.Drawing.Size(464, 34);
+            this.CopyrightInfoLabel.Size = new System.Drawing.Size(438, 34);
             this.CopyrightInfoLabel.TabIndex = 14;
-            this.CopyrightInfoLabel.Text = "\"Minecraft\" является торговой маркой Mojang AB. Все права защищены.\r\nMojang AB яв" +
-    "ляется дочерней студией Microsoft Studios.\r\n";
+            this.CopyrightInfoLabel.Text = "\"Minecraft\" is a trademark of Mojang Synergies AB. All rights reserved.\r\nMojang S" +
+    "ynergies AB is a subsidiary of Microsoft Studios.";
             this.CopyrightInfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // LoggerGroupBox
@@ -466,12 +706,12 @@ namespace FreeLauncher.Forms
             this.LoggerGroupBox.BackColor = System.Drawing.Color.Transparent;
             this.LoggerGroupBox.Controls.Add(this.CloseGameOutput);
             this.LoggerGroupBox.Controls.Add(this.EnableMinecraftLogging);
-            this.LoggerGroupBox.HeaderText = "Логирование";
+            this.LoggerGroupBox.HeaderText = "Logging";
             this.LoggerGroupBox.Location = new System.Drawing.Point(469, 141);
             this.LoggerGroupBox.Name = "LoggerGroupBox";
             this.LoggerGroupBox.Size = new System.Drawing.Size(357, 121);
             this.LoggerGroupBox.TabIndex = 13;
-            this.LoggerGroupBox.Text = "Логирование";
+            this.LoggerGroupBox.Text = "Logging";
             this.LoggerGroupBox.ThemeName = "VisualStudio2012Dark";
             // 
             // CloseGameOutput
@@ -479,9 +719,9 @@ namespace FreeLauncher.Forms
             this.CloseGameOutput.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CloseGameOutput.Location = new System.Drawing.Point(5, 45);
             this.CloseGameOutput.Name = "CloseGameOutput";
-            this.CloseGameOutput.Size = new System.Drawing.Size(327, 18);
+            this.CloseGameOutput.Size = new System.Drawing.Size(245, 18);
             this.CloseGameOutput.TabIndex = 2;
-            this.CloseGameOutput.Text = "Закрывать вкладку, если завершение прошло без ошибок";
+            this.CloseGameOutput.Text = "Close tabs automaticly if there was no errors";
             this.CloseGameOutput.ThemeName = "VisualStudio2012Dark";
             this.CloseGameOutput.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On;
             // 
@@ -489,9 +729,9 @@ namespace FreeLauncher.Forms
             // 
             this.EnableMinecraftLogging.Location = new System.Drawing.Point(5, 21);
             this.EnableMinecraftLogging.Name = "EnableMinecraftLogging";
-            this.EnableMinecraftLogging.Size = new System.Drawing.Size(177, 18);
+            this.EnableMinecraftLogging.Size = new System.Drawing.Size(191, 18);
             this.EnableMinecraftLogging.TabIndex = 0;
-            this.EnableMinecraftLogging.Text = "Выводить лог игры в консоль";
+            this.EnableMinecraftLogging.Text = "Display logs from OUTPUT thread";
             this.EnableMinecraftLogging.ThemeName = "VisualStudio2012Dark";
             // 
             // MainGroupBox
@@ -502,12 +742,12 @@ namespace FreeLauncher.Forms
             this.MainGroupBox.Controls.Add(this.radLabel4);
             this.MainGroupBox.Controls.Add(this.LangDropDownList);
             this.MainGroupBox.Controls.Add(this.DownloadAssetsBox);
-            this.MainGroupBox.HeaderText = "Основные";
+            this.MainGroupBox.HeaderText = "Main";
             this.MainGroupBox.Location = new System.Drawing.Point(469, 14);
             this.MainGroupBox.Name = "MainGroupBox";
             this.MainGroupBox.Size = new System.Drawing.Size(357, 121);
             this.MainGroupBox.TabIndex = 12;
-            this.MainGroupBox.Text = "Основные";
+            this.MainGroupBox.Text = "Main";
             this.MainGroupBox.ThemeName = "VisualStudio2012Dark";
             // 
             // CheckUpdatesCheckBox
@@ -515,9 +755,9 @@ namespace FreeLauncher.Forms
             this.CheckUpdatesCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckUpdatesCheckBox.Location = new System.Drawing.Point(5, 51);
             this.CheckUpdatesCheckBox.Name = "CheckUpdatesCheckBox";
-            this.CheckUpdatesCheckBox.Size = new System.Drawing.Size(245, 18);
+            this.CheckUpdatesCheckBox.Size = new System.Drawing.Size(160, 18);
             this.CheckUpdatesCheckBox.TabIndex = 6;
-            this.CheckUpdatesCheckBox.Text = "Проверять наличие обновлений лаунчера";
+            this.CheckUpdatesCheckBox.Text = "Check for launcher updates";
             this.CheckUpdatesCheckBox.ThemeName = "VisualStudio2012Dark";
             this.CheckUpdatesCheckBox.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On;
             // 
@@ -525,11 +765,11 @@ namespace FreeLauncher.Forms
             // 
             this.radLabel4.Location = new System.Drawing.Point(5, 21);
             this.radLabel4.Name = "radLabel4";
-            this.radLabel4.Size = new System.Drawing.Size(87, 18);
+            this.radLabel4.Size = new System.Drawing.Size(58, 18);
             this.radLabel4.TabIndex = 5;
-            this.radLabel4.Text = "Язык/Language:";
+            this.radLabel4.Text = "Language:";
             this.radLabel4.ThemeName = "VisualStudio2012Dark";
-            ((Telerik.WinControls.UI.RadLabelElement)(this.radLabel4.GetChildAt(0))).Text = "Язык/Language:";
+            ((Telerik.WinControls.UI.RadLabelElement)(this.radLabel4.GetChildAt(0))).Text = "Language:";
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radLabel4.GetChildAt(0).GetChildAt(0))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             // 
             // LangDropDownList
@@ -537,14 +777,13 @@ namespace FreeLauncher.Forms
             this.LangDropDownList.AutoCompleteDisplayMember = null;
             this.LangDropDownList.AutoCompleteValueMember = null;
             this.LangDropDownList.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            radListDataItem1.Tag = "ru_RU";
-            radListDataItem1.Text = "Русский (default)";
-            this.LangDropDownList.Items.Add(radListDataItem1);
+            radListDataItem4.Tag = "en_UK";
+            radListDataItem4.Text = "englishАвтоподключение:";
+            this.LangDropDownList.Items.Add(radListDataItem4);
             this.LangDropDownList.Location = new System.Drawing.Point(150, 21);
             this.LangDropDownList.Name = "LangDropDownList";
             this.LangDropDownList.Size = new System.Drawing.Size(202, 24);
             this.LangDropDownList.TabIndex = 3;
-            this.LangDropDownList.Text = "Русский (ru-RU)";
             this.LangDropDownList.ThemeName = "VisualStudio2012Dark";
             this.LangDropDownList.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.LangDropDownList_SelectedIndexChanged);
             // 
@@ -552,9 +791,9 @@ namespace FreeLauncher.Forms
             // 
             this.DownloadAssetsBox.Location = new System.Drawing.Point(5, 75);
             this.DownloadAssetsBox.Name = "DownloadAssetsBox";
-            this.DownloadAssetsBox.Size = new System.Drawing.Size(181, 18);
+            this.DownloadAssetsBox.Size = new System.Drawing.Size(130, 18);
             this.DownloadAssetsBox.TabIndex = 0;
-            this.DownloadAssetsBox.Text = "Пропускать загрузку ресурсов";
+            this.DownloadAssetsBox.Text = "Skip assets download";
             this.DownloadAssetsBox.ThemeName = "VisualStudio2012Dark";
             // 
             // AboutVersion
@@ -571,9 +810,9 @@ namespace FreeLauncher.Forms
             this.AboutVersion.Size = new System.Drawing.Size(58, 18);
             this.AboutVersion.TabIndex = 1;
             this.AboutVersion.Text = "0.0.0.000";
-            this.AboutVersion.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.AboutVersion.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.AboutVersion.ThemeName = "VisualStudio2012Dark";
-            ((Telerik.WinControls.UI.RadLabelElement)(this.AboutVersion.GetChildAt(0))).TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            ((Telerik.WinControls.UI.RadLabelElement)(this.AboutVersion.GetChildAt(0))).TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             ((Telerik.WinControls.UI.RadLabelElement)(this.AboutVersion.GetChildAt(0))).Text = "0.0.0.000";
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.AboutVersion.GetChildAt(0).GetChildAt(0))).BackColor = System.Drawing.Color.Transparent;
             // 
@@ -599,9 +838,9 @@ namespace FreeLauncher.Forms
             this.MCofflineDescLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MCofflineDescLabel.Location = new System.Drawing.Point(14, 184);
             this.MCofflineDescLabel.Name = "MCofflineDescLabel";
-            this.MCofflineDescLabel.Size = new System.Drawing.Size(402, 17);
+            this.MCofflineDescLabel.Size = new System.Drawing.Size(340, 17);
             this.MCofflineDescLabel.TabIndex = 9;
-            this.MCofflineDescLabel.Text = "MCoffline - лучшая программа для серверных администраторов!";
+            this.MCofflineDescLabel.Text = "MCoffline - The best software for servers administrators!";
             // 
             // radLabel1
             // 
@@ -654,9 +893,9 @@ namespace FreeLauncher.Forms
             this.DevInfoLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.DevInfoLabel.Location = new System.Drawing.Point(14, 55);
             this.DevInfoLabel.Name = "DevInfoLabel";
-            this.DevInfoLabel.Size = new System.Drawing.Size(146, 17);
+            this.DevInfoLabel.Size = new System.Drawing.Size(149, 17);
             this.DevInfoLabel.TabIndex = 3;
-            this.DevInfoLabel.Text = "Разработано dedepete";
+            this.DevInfoLabel.Text = "Developed by dedepete";
             // 
             // ruMcURL
             // 
@@ -680,9 +919,9 @@ namespace FreeLauncher.Forms
             this.GratitudesDescLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.GratitudesDescLabel.Location = new System.Drawing.Point(14, 118);
             this.GratitudesDescLabel.Name = "GratitudesDescLabel";
-            this.GratitudesDescLabel.Size = new System.Drawing.Size(449, 17);
+            this.GratitudesDescLabel.Size = new System.Drawing.Size(291, 17);
             this.GratitudesDescLabel.TabIndex = 6;
-            this.GratitudesDescLabel.Text = "Большое спасибо администрации портала ru-minecraft.ru за хост файлов";
+            this.GratitudesDescLabel.Text = "Administration of ru-minecraft.ru for file hosting!";
             // 
             // GratitudesLabel
             // 
@@ -693,7 +932,7 @@ namespace FreeLauncher.Forms
             this.GratitudesLabel.Name = "GratitudesLabel";
             this.GratitudesLabel.Size = new System.Drawing.Size(202, 41);
             this.GratitudesLabel.TabIndex = 7;
-            this.GratitudesLabel.Text = "Благодарности";
+            this.GratitudesLabel.Text = "Thanks";
             this.GratitudesLabel.ThemeName = "VisualStudio2012Dark";
             ((Telerik.WinControls.UI.RadLabelElement)(this.GratitudesLabel.GetChildAt(0))).Text = "Благодарности";
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.GratitudesLabel.GetChildAt(0).GetChildAt(0))).BackColor = System.Drawing.Color.Transparent;
@@ -704,7 +943,7 @@ namespace FreeLauncher.Forms
             this.LicensesPage.Location = new System.Drawing.Point(5, 5);
             this.LicensesPage.Name = "LicensesPage";
             this.LicensesPage.Size = new System.Drawing.Size(838, 293);
-            this.LicensesPage.Text = "ЛИЦЕНЗИИ";
+            this.LicensesPage.Text = "LICENSES";
             // 
             // licensePageView
             // 
@@ -716,7 +955,6 @@ namespace FreeLauncher.Forms
             this.licensePageView.SelectedPage = this.FreeLauncherLicense;
             this.licensePageView.Size = new System.Drawing.Size(838, 293);
             this.licensePageView.TabIndex = 0;
-            this.licensePageView.Text = "radPageView3";
             this.licensePageView.ThemeName = "VisualStudio2012Dark";
             this.licensePageView.ViewMode = Telerik.WinControls.UI.PageViewMode.Backstage;
             ((Telerik.WinControls.UI.StripViewItemContainer)(this.licensePageView.GetChildAt(0).GetChildAt(0))).MinSize = new System.Drawing.Size(150, 0);
@@ -773,6 +1011,21 @@ namespace FreeLauncher.Forms
             this.StatusBar.ThemeName = "VisualStudio2012Dark";
             this.StatusBar.Visible = false;
             // 
+            // langWikiLink
+            // 
+            this.langWikiLink.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(105)))), ((int)(((byte)(175)))));
+            this.langWikiLink.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.langWikiLink.AutoSize = true;
+            this.langWikiLink.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.langWikiLink.LinkColor = System.Drawing.Color.Gray;
+            this.langWikiLink.Location = new System.Drawing.Point(758, 5);
+            this.langWikiLink.Name = "langWikiLink";
+            this.langWikiLink.Size = new System.Drawing.Size(94, 13);
+            this.langWikiLink.TabIndex = 5;
+            this.langWikiLink.TabStop = true;
+            this.langWikiLink.Text = "Having troubles?";
+            this.langWikiLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.langWikiLink_LinkClicked);
+            // 
             // radPanel1
             // 
             this.radPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("radPanel1.BackgroundImage")));
@@ -807,7 +1060,6 @@ namespace FreeLauncher.Forms
             // ManageUsersButton
             // 
             this.ManageUsersButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ManageUsersButton.Image = global::FreeLauncher.Properties.Resources.edit;
             this.ManageUsersButton.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.ManageUsersButton.Location = new System.Drawing.Point(513, 6);
             this.ManageUsersButton.Name = "ManageUsersButton";
@@ -823,7 +1075,7 @@ namespace FreeLauncher.Forms
             this.NicknameDropDownList.AutoCompleteValueMember = null;
             this.NicknameDropDownList.Location = new System.Drawing.Point(314, 6);
             this.NicknameDropDownList.Name = "NicknameDropDownList";
-            this.NicknameDropDownList.NullText = "Ник";
+            this.NicknameDropDownList.NullText = "Nick";
             this.NicknameDropDownList.Size = new System.Drawing.Size(196, 24);
             this.NicknameDropDownList.TabIndex = 3;
             this.NicknameDropDownList.ThemeName = "VisualStudio2012Dark";
@@ -864,7 +1116,7 @@ namespace FreeLauncher.Forms
             this.LaunchButton.Name = "LaunchButton";
             this.LaunchButton.Size = new System.Drawing.Size(231, 22);
             this.LaunchButton.TabIndex = 4;
-            this.LaunchButton.Text = "Запуск игры";
+            this.LaunchButton.Text = "Launch The Game";
             this.LaunchButton.ThemeName = "VisualStudio2012Dark";
             this.LaunchButton.Click += new System.EventHandler(this.LaunchButton_Click);
             // 
@@ -886,7 +1138,7 @@ namespace FreeLauncher.Forms
             this.EditProfileButton.Name = "EditProfileButton";
             this.EditProfileButton.Size = new System.Drawing.Size(110, 22);
             this.EditProfileButton.TabIndex = 1;
-            this.EditProfileButton.Text = "Изменить профиль";
+            this.EditProfileButton.Text = "Edit Profile";
             this.EditProfileButton.TextWrap = true;
             this.EditProfileButton.ThemeName = "VisualStudio2012Dark";
             this.EditProfileButton.Click += new System.EventHandler(this.EditProfile_Click);
@@ -897,25 +1149,10 @@ namespace FreeLauncher.Forms
             this.AddProfile.Name = "AddProfile";
             this.AddProfile.Size = new System.Drawing.Size(110, 22);
             this.AddProfile.TabIndex = 0;
-            this.AddProfile.Text = "Добавить профиль";
+            this.AddProfile.Text = "Add Profile";
             this.AddProfile.TextWrap = true;
             this.AddProfile.ThemeName = "VisualStudio2012Dark";
             this.AddProfile.Click += new System.EventHandler(this.AddProfile_Click);
-            // 
-            // langWikiLink
-            // 
-            this.langWikiLink.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(105)))), ((int)(((byte)(175)))));
-            this.langWikiLink.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.langWikiLink.AutoSize = true;
-            this.langWikiLink.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.langWikiLink.LinkColor = System.Drawing.Color.Gray;
-            this.langWikiLink.Location = new System.Drawing.Point(758, 5);
-            this.langWikiLink.Name = "langWikiLink";
-            this.langWikiLink.Size = new System.Drawing.Size(94, 13);
-            this.langWikiLink.TabIndex = 5;
-            this.langWikiLink.TabStop = true;
-            this.langWikiLink.Text = "Having troubles?";
-            this.langWikiLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.langWikiLink_LinkClicked);
             // 
             // LauncherForm
             // 
@@ -933,11 +1170,13 @@ namespace FreeLauncher.Forms
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
-            this.Text = "FreeLauncher";
+            this.Text = "MLauncher";
             this.ThemeName = "VisualStudio2012Dark";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LauncherForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.mainPageView)).EndInit();
             this.mainPageView.ResumeLayout(false);
+            this.Hotbar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radListView1)).EndInit();
             this.News.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBar)).EndInit();
             this.navBar.ResumeLayout(false);
@@ -952,6 +1191,23 @@ namespace FreeLauncher.Forms
             ((System.ComponentModel.ISupportInitialize)(this.versionsListView)).EndInit();
             this.EditProfiles.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.profilesListView)).EndInit();
+            this.Mods.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).EndInit();
+            this.radPageView1.ResumeLayout(false);
+            this.GetMods.ResumeLayout(false);
+            this.GetMods.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radDropDownList1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radListView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
+            this.radGroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radListControl2)).EndInit();
+            this.radPageViewPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).EndInit();
+            this.radGroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radListControl1)).EndInit();
             this.AboutPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AboutPageView)).EndInit();
             this.AboutPageView.ResumeLayout(false);
@@ -1032,22 +1288,12 @@ namespace FreeLauncher.Forms
         private RadLabel GratitudesLabel;
         private RadPageViewPage LicensesPage;
         private RadPageView licensePageView;
-        private RadPanel radPanel1;
-        private RadButton ManageUsersButton;
-        public RadDropDownList NicknameDropDownList;
-        private Label SelectedVersion;
-        private PictureBox LogoBox;
-        private RadButton LaunchButton;
-        public RadDropDownList profilesDropDownBox;
-        private RadButton EditProfileButton;
-        private RadButton AddProfile;
         private RadPageViewPage dotMCLauncherLicense;
         private RadPageViewPage FreeLauncherLicense;
         private RadLabel dotMCLauncherLicenseText;
         private RadProgressBar StatusBar;
         private RadPanel ConsoleOptionsPanel;
         private RadToggleButton DebugModeButton;
-        private RadButton DeleteProfileButton;
         private RadButton SetToClipboardButton;
         private RadGroupBox LoggerGroupBox;
         public RadCheckBox CloseGameOutput;
@@ -1062,5 +1308,31 @@ namespace FreeLauncher.Forms
         private RadPageViewPage EditProfiles;
         private RadListView profilesListView;
         public RadCheckBox CheckUpdatesCheckBox;
+        private RadButton AddProfile;
+        private RadButton EditProfileButton;
+        public RadDropDownList profilesDropDownBox;
+        private RadButton LaunchButton;
+        private PictureBox LogoBox;
+        private Label SelectedVersion;
+        public RadDropDownList NicknameDropDownList;
+        private RadButton ManageUsersButton;
+        private RadButton DeleteProfileButton;
+        private RadPanel radPanel1;
+        private RadPageViewPage Hotbar;
+        private RadListView radListView1;
+        private RadPageViewPage Mods;
+        private ImageList imageList1;
+        private RadPageView radPageView1;
+        private RadPageViewPage GetMods;
+        private RadListView radListView2;
+        private RadButton radButton1;
+        private RadTextBox radTextBox1;
+        private RadGroupBox radGroupBox1;
+        private RadListControl radListControl2;
+        private RadPageViewPage radPageViewPage2;
+        private RadButton radButton2;
+        private RadGroupBox radGroupBox2;
+        private RadListControl radListControl1;
+        private RadDropDownList radDropDownList1;
     }
 }

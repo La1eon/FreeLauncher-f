@@ -67,8 +67,10 @@ namespace dotMCLauncher.Profiling
         [JsonIgnore]
         public LauncherVisibility LauncherVisibilityOnGameClose
         {
-            get {
-                switch (_launcherVisibilityOnGameClose) {
+            get
+            {
+                switch (_launcherVisibilityOnGameClose)
+                {
                     case null:
                         return LauncherVisibility.NULL;
                     case "hide launcher and re-open when game closes":
@@ -79,9 +81,11 @@ namespace dotMCLauncher.Profiling
                         return LauncherVisibility.VISIBLE;
                 }
             }
-            set {
+            set
+            {
                 // ReSharper disable once SwitchStatementMissingSomeCases
-                switch (value) {
+                switch (value)
+                {
                     case LauncherVisibility.NULL:
                         _launcherVisibilityOnGameClose = null;
                         break;
@@ -134,7 +138,8 @@ namespace dotMCLauncher.Profiling
         /// </summary>
         public string ToString(Formatting formatting)
         {
-            return JsonConvert.SerializeObject(this, formatting, new JsonSerializerSettings {
+            return JsonConvert.SerializeObject(this, formatting, new JsonSerializerSettings
+            {
                 NullValueHandling = NullValueHandling.Ignore
             });
         }

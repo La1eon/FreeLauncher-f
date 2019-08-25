@@ -1,6 +1,6 @@
 ﻿using CommandLine;
 
-namespace FreeLauncher
+namespace MLauncher
 {
     public class ApplicationArguments
     {

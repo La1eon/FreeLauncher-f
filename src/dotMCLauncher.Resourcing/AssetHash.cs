@@ -21,7 +21,8 @@
 
         public static implicit operator AssetHash(string @string)
         {
-            return new AssetHash {
+            return new AssetHash
+            {
                 _value = @string
             };
         }

@@ -27,8 +27,9 @@ namespace dotMCLauncher.Networking
         public override Request Parse(string json)
         {
             JObject jobject = JObject.Parse(json);
-            Refresh request = new Refresh(jobject["accessToken"].ToString(), jobject["clientToken"].ToString()) {
-                User = (JObject) jobject["user"]
+            Refresh request = new Refresh(jobject["accessToken"].ToString(), jobject["clientToken"].ToString())
+            {
+                User = (JObject)jobject["user"]
             };
             return request;
         }

@@ -1,4 +1,4 @@
-﻿namespace FreeLauncher
+﻿namespace MLauncher
 {
     public class ApplicationConfiguration
     {

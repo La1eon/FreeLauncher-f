@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Newtonsoft.Json;
 
 namespace dotMCLauncher.Profiling
 {
@@ -23,13 +23,16 @@ namespace dotMCLauncher.Profiling
         [JsonProperty("profiles")]
         private Dictionary<string, Profile> _profiles
         {
-            get {
-                if (Profiles == null || !Profiles.Any()) {
+            get
+            {
+                if (Profiles == null || !Profiles.Any())
+                {
                     return null;
                 }
                 return Profiles.ToDictionary(pair => pair.Key, pair => pair.Value);
             }
-            set {
+            set
+            {
                 Profiles = value.ToList();
             }
         }
@@ -40,7 +43,7 @@ namespace dotMCLauncher.Profiling
         /// <param name="pathToFile">Path to file with profiles data.</param>
         public static ProfileManager ParseProfile(string pathToFile)
         {
-            return (ProfileManager) JsonConvert.DeserializeObject(File.ReadAllText(pathToFile), typeof(ProfileManager));
+            return (ProfileManager)JsonConvert.DeserializeObject(File.ReadAllText(pathToFile), typeof(ProfileManager));
         }
 
         /// <summary>
@@ -48,7 +51,8 @@ namespace dotMCLauncher.Profiling
         /// </summary>
         public string ToJson()
         {
-            return ToJson(Formatting.Indented, new JsonSerializerSettings {
+            return ToJson(Formatting.Indented, new JsonSerializerSettings
+            {
                 NullValueHandling = NullValueHandling.Ignore
             });
         }
@@ -59,7 +63,8 @@ namespace dotMCLauncher.Profiling
         /// <param name="formatting">JSON formatting.</param>
         public string ToJson(Formatting formatting)
         {
-            return ToJson(formatting, new JsonSerializerSettings {
+            return ToJson(formatting, new JsonSerializerSettings
+            {
                 NullValueHandling = NullValueHandling.Ignore
             });
         }
@@ -77,7 +82,8 @@ namespace dotMCLauncher.Profiling
         public string ToJson(Formatting formatting, JsonSerializerSettings settings)
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented,
-                new JsonSerializerSettings {
+                new JsonSerializerSettings
+                {
                     NullValueHandling = NullValueHandling.Ignore
                 });
         }
@@ -88,10 +94,12 @@ namespace dotMCLauncher.Profiling
         /// <param name="profile">Profile.</param>
         public void AddProfile(Profile profile)
         {
-            if (string.IsNullOrWhiteSpace(profile.ProfileName)) {
+            if (string.IsNullOrWhiteSpace(profile.ProfileName))
+            {
                 throw new ArgumentNullException(nameof(profile.ProfileName));
             }
-            if (Profiles.ToArray().Any(pair => pair.Key == profile.ProfileName)) {
+            if (Profiles.ToArray().Any(pair => pair.Key == profile.ProfileName))
+            {
                 throw new ArgumentException("Profile '" + profile.ProfileName + "' already exists.");
             }
             Profiles.Add(new KeyValuePair<string, Profile>(profile.ProfileName, profile));
@@ -103,7 +111,8 @@ namespace dotMCLauncher.Profiling
         /// <param name="profile">Profile.</param>
         public void RemoveProfile(Profile profile)
         {
-            if (string.IsNullOrWhiteSpace(profile.ProfileName)) {
+            if (string.IsNullOrWhiteSpace(profile.ProfileName))
+            {
                 throw new ArgumentNullException(nameof(profile.ProfileName));
             }
             Profiles.Remove(Profiles.First(pair => pair.Key == profile.ProfileName));
@@ -115,7 +124,8 @@ namespace dotMCLauncher.Profiling
         /// <param name="profileName">Profile name.</param>
         public void RemoveProfile(string profileName)
         {
-            if (string.IsNullOrWhiteSpace(profileName)) {
+            if (string.IsNullOrWhiteSpace(profileName))
+            {
                 throw new ArgumentNullException(nameof(profileName));
             }
             Profiles.Remove(Profiles.First(pair => pair.Key == profileName));
@@ -128,7 +138,8 @@ namespace dotMCLauncher.Profiling
         /// <param name="newName">New name.</param>
         public void RenameProfile(Profile profile, string newName)
         {
-            if (LastUsedProfile == profile.ProfileName) {
+            if (LastUsedProfile == profile.ProfileName)
+            {
                 LastUsedProfile = newName;
             }
             RemoveProfile(profile);
@@ -148,18 +159,22 @@ namespace dotMCLauncher.Profiling
 
         private void ChangeProfilesOrder(Profile profile, bool moveDown)
         {
-            if (string.IsNullOrWhiteSpace(profile.ProfileName)) {
-                throw new ArgumentNullException(nameof(profile.ProfileName));
+            if (string.IsNullOrWhiteSpace(profile.ProfileName))
+            {
+                //throw new ArgumentNullException(nameof(profile.ProfileName));
             }
-            if (Profiles.All(pair => pair.Key != profile.ProfileName)) {
+            if (Profiles.All(pair => pair.Key != profile.ProfileName))
+            {
                 throw new ArgumentException("Profile '" + profile.ProfileName + "' does not exist.");
             }
             int index = Profiles.IndexOf(Profiles.First(pair => pair.Key == profile.ProfileName));
-            if (index != 0 && moveDown) {
+            if (index != 0 && moveDown)
+            {
                 Profiles.RemoveAt(index);
                 Profiles.Insert(index - 1, new KeyValuePair<string, Profile>(profile.ProfileName, profile));
             }
-            if (index != Profiles.Count - 1 && !moveDown) {
+            if (index != Profiles.Count - 1 && !moveDown)
+            {
                 Profiles.RemoveAt(index);
                 Profiles.Insert(index + 1, new KeyValuePair<string, Profile>(profile.ProfileName, profile));
             }

@@ -1,4 +1,4 @@
-﻿namespace FreeLauncher.Forms
+﻿namespace MLauncher.Forms
 {
     partial class UsersForm
     {
@@ -85,7 +85,7 @@
             this.DeleteUserButton.Name = "DeleteUserButton";
             this.DeleteUserButton.Size = new System.Drawing.Size(198, 25);
             this.DeleteUserButton.TabIndex = 2;
-            this.DeleteUserButton.Text = "Удалить выбранного пользователя";
+            this.DeleteUserButton.Text = "Remove selected user";
             this.DeleteUserButton.ThemeName = "VisualStudio2012Dark";
             this.DeleteUserButton.Click += new System.EventHandler(this.DeleteUserButton_Click);
             // 
@@ -99,12 +99,12 @@
             this.AddNewUserBox.Controls.Add(this.UsernameTextBox);
             this.AddNewUserBox.Controls.Add(this.NicknameLabel);
             this.AddNewUserBox.Controls.Add(this.YesNoToggleSwitch);
-            this.AddNewUserBox.HeaderText = "Добавление нового аккаунта";
+            this.AddNewUserBox.HeaderText = "Add new user";
             this.AddNewUserBox.Location = new System.Drawing.Point(216, -1);
             this.AddNewUserBox.Name = "AddNewUserBox";
             this.AddNewUserBox.Size = new System.Drawing.Size(236, 135);
             this.AddNewUserBox.TabIndex = 3;
-            this.AddNewUserBox.Text = "Добавление нового аккаунта";
+            this.AddNewUserBox.Text = "Add new user";
             this.AddNewUserBox.ThemeName = "VisualStudio2012Dark";
             // 
             // AddUserButton
@@ -114,7 +114,7 @@
             this.AddUserButton.Name = "AddUserButton";
             this.AddUserButton.Size = new System.Drawing.Size(226, 25);
             this.AddUserButton.TabIndex = 6;
-            this.AddUserButton.Text = "Добавить нового пользователя";
+            this.AddUserButton.Text = "Add new user";
             this.AddUserButton.ThemeName = "VisualStudio2012Dark";
             this.AddUserButton.Click += new System.EventHandler(this.AddUserButton_Click);
             // 
@@ -136,7 +136,7 @@
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(47, 18);
             this.PasswordLabel.TabIndex = 4;
-            this.PasswordLabel.Text = "Пароль:";
+            this.PasswordLabel.Text = "Password:";
             this.PasswordLabel.ThemeName = "VisualStudio2012Dark";
             // 
             // LicenseQuestionLabel
@@ -145,7 +145,7 @@
             this.LicenseQuestionLabel.Name = "LicenseQuestionLabel";
             this.LicenseQuestionLabel.Size = new System.Drawing.Size(161, 18);
             this.LicenseQuestionLabel.TabIndex = 3;
-            this.LicenseQuestionLabel.Text = "У вас лицензионный аккаунт?";
+            this.LicenseQuestionLabel.Text = "License account?";
             this.LicenseQuestionLabel.ThemeName = "VisualStudio2012Dark";
             // 
             // UsernameTextBox
@@ -163,7 +163,7 @@
             this.NicknameLabel.Name = "NicknameLabel";
             this.NicknameLabel.Size = new System.Drawing.Size(65, 18);
             this.NicknameLabel.TabIndex = 1;
-            this.NicknameLabel.Text = "Логин/Ник:";
+            this.NicknameLabel.Text = "Username:";
             this.NicknameLabel.ThemeName = "VisualStudio2012Dark";
             // 
             // YesNoToggleSwitch

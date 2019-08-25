@@ -17,12 +17,16 @@ namespace dotMCLauncher.Versioning
         {
             Regex re = new Regex(@"\-\-(\w+) (\S+)", RegexOptions.IgnoreCase);
             MatchCollection match = re.Matches(argLine);
-            for (int i = 0; i < match.Count; i++) {
-                if (!ContainsKey(match[i].Groups[1].Value)) {
+            for (int i = 0; i < match.Count; i++)
+            {
+                if (!ContainsKey(match[i].Groups[1].Value))
+                {
                     Add(match[i].Groups[1].Value, new List<string> {
                         match[i].Groups[2].Value
                     });
-                } else {
+                }
+                else
+                {
                     base[match[i].Groups[1].Value].Add(match[i].Groups[2].Value);
                 }
             }
@@ -45,7 +49,8 @@ namespace dotMCLauncher.Versioning
         /// <param name="value">Value.</param>
         public void Add(string key, string value)
         {
-            if (ContainsKey(key)) {
+            if (ContainsKey(key))
+            {
                 base[key].Add(value);
                 return;
             }
@@ -61,10 +66,12 @@ namespace dotMCLauncher.Versioning
         /// <param name="values">Values.</param>
         public void Add(string key, params string[] values)
         {
-            if (!ContainsKey(key)) {
+            if (!ContainsKey(key))
+            {
                 Add(key, new List<string>());
             }
-            foreach (string str in values) {
+            foreach (string str in values)
+            {
                 base[key].Add(str);
             }
         }
@@ -85,7 +92,8 @@ namespace dotMCLauncher.Versioning
         {
             Regex re = new Regex(@"\$\{(\w+)\}", RegexOptions.IgnoreCase);
             StringBuilder toReturn = new StringBuilder();
-            if (!string.IsNullOrEmpty(_argLine)) {
+            if (!string.IsNullOrEmpty(_argLine))
+            {
                 toReturn.Append(re.Replace(_argLine,
                     match => values.ContainsKey(match.Groups[1].Value)
                         ? (!values[match.Groups[1].Value].Contains(' ')
@@ -93,38 +101,51 @@ namespace dotMCLauncher.Versioning
                             : $"\"{values[match.Groups[1].Value]}\"")
                         : match.Value) + " ");
             }
-            foreach (string key in Keys) {
+            foreach (string key in Keys)
+            {
                 string value;
-                if (base[key]?.Count > 0 && values != null) {
-                    foreach (string str in base[key]) {
+                if (base[key]?.Count > 0 && values != null)
+                {
+                    foreach (string str in base[key])
+                    {
                         value = str;
-                        if (re.IsMatch(str)) {
+                        if (re.IsMatch(str))
+                        {
                             value = re.Replace(str,
                                 match =>
                                     values.ContainsKey(match.Groups[1].Value)
                                         ? values[match.Groups[1].Value]
                                         : str);
                         }
-                        if (value.Contains(' ')) {
+                        if (value.Contains(' '))
+                        {
                             value = $"\"{value}\"";
                         }
-                        if (value != string.Empty) {
+                        if (value != string.Empty)
+                        {
                             value = " " + value;
                         }
                         toReturn.Append($"--{key}{value} ");
                     }
-                } else if (base[key]?.Count > 0) {
-                    foreach (string str in base[key]) {
+                }
+                else if (base[key]?.Count > 0)
+                {
+                    foreach (string str in base[key])
+                    {
                         value = str;
-                        if (value.Contains(' ')) {
+                        if (value.Contains(' '))
+                        {
                             value = $"\"{value}\"";
                         }
-                        if (value != string.Empty) {
+                        if (value != string.Empty)
+                        {
                             value = " " + value;
                         }
                         toReturn.Append($"--{key}{value} ");
                     }
-                } else {
+                }
+                else
+                {
                     toReturn.Append($"--{key} ");
                 }
             }

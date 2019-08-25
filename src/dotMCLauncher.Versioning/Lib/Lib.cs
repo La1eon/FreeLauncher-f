@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
+using System.Collections.Generic;
 
 namespace dotMCLauncher.Versioning
 {
@@ -42,12 +42,15 @@ namespace dotMCLauncher.Versioning
         /// </summary>
         public bool IsForWindows()
         {
-            if (_rules == null) {
+            if (_rules == null)
+            {
                 return true;
             }
             bool toReturn = false;
-            foreach (Rule rule in _rules) {
-                switch (rule.Action) {
+            foreach (Rule rule in _rules)
+            {
+                switch (rule.Action)
+                {
                     case "allow":
                         toReturn = (rule.Os == null && rule.Features == null) || rule.Os.Name == "windows";
                         break;

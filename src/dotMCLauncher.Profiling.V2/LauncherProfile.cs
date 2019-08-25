@@ -1,5 +1,5 @@
-﻿using System;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace dotMCLauncher.Profiling.V2
 {
@@ -17,8 +17,10 @@ namespace dotMCLauncher.Profiling.V2
         [JsonIgnore]
         public LauncherProfileIcon Icon
         {
-            get {
-                switch (_icon) {
+            get
+            {
+                switch (_icon)
+                {
                     case "Bedrock":
                         return LauncherProfileIcon.BEDROCK;
                     case "Bookshelf":
@@ -147,8 +149,10 @@ namespace dotMCLauncher.Profiling.V2
                         return LauncherProfileIcon.FURNACE;
                 }
             }
-            set {
-                switch (value) {
+            set
+            {
+                switch (value)
+                {
                     case LauncherProfileIcon.BEDROCK:
                         _icon = "Bedrock";
                         break;
@@ -349,7 +353,8 @@ namespace dotMCLauncher.Profiling.V2
         [JsonIgnore]
         public LauncherProfileType Type
         {
-            get {
+            get
+            {
                 switch (_type)
                 {
                     case "latest-release":
@@ -360,7 +365,8 @@ namespace dotMCLauncher.Profiling.V2
                         return LauncherProfileType.CUSTOM;
                 }
             }
-            set {
+            set
+            {
                 switch (value)
                 {
                     case LauncherProfileType.LATEST_RELEASE:

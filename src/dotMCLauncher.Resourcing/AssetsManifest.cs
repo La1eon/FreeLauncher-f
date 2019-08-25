@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization;
-using Newtonsoft.Json;
 
 namespace dotMCLauncher.Resourcing
 {
@@ -15,14 +15,15 @@ namespace dotMCLauncher.Resourcing
 
         public void AssociateNames()
         {
-            foreach (KeyValuePair<string, Asset> pair in Objects) {
+            foreach (KeyValuePair<string, Asset> pair in Objects)
+            {
                 pair.Value.AssociatedName = pair.Key;
             }
         }
 
         public static AssetsManifest Parse(string pathToFile)
         {
-            return (AssetsManifest) JsonConvert.DeserializeObject(File.ReadAllText(pathToFile), typeof(AssetsManifest));
+            return (AssetsManifest)JsonConvert.DeserializeObject(File.ReadAllText(pathToFile), typeof(AssetsManifest));
         }
 
         [OnDeserialized]

@@ -1,5 +1,5 @@
-﻿using System.Net;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
+using System.Net;
 
 namespace dotMCLauncher.Networking
 {

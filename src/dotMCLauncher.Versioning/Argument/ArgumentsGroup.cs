@@ -20,17 +20,21 @@ namespace dotMCLauncher.Versioning
         public string ToString(Dictionary<string, string> values, Rule[] rules)
         {
             StringBuilder toReturn = new StringBuilder();
-            foreach (Argument argument in Arguments) {
-                switch (argument.Type) {
+            foreach (Argument argument in Arguments)
+            {
+                switch (argument.Type)
+                {
                     case ArgumentType.SINGLE:
                         toReturn.Append((argument as SingleArgument).Value + " ");
                         break;
                     case ArgumentType.EXTENDED:
                         ExtendedArgument extendedArgument = argument as ExtendedArgument;
-                        if (!extendedArgument.IsValid(rules)) {
+                        if (!extendedArgument.IsValid(rules))
+                        {
                             continue;
                         }
-                        if (!extendedArgument.HasMultipleArguments) {
+                        if (!extendedArgument.HasMultipleArguments)
+                        {
                             toReturn.Append((extendedArgument.Value.Contains(' ')
                                 ? "\"" + extendedArgument.Value + "\""
                                 : extendedArgument.Value) + " ");

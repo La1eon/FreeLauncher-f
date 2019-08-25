@@ -1,9 +1,9 @@
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
-using Newtonsoft.Json;
 
 namespace dotMCLauncher.Profiling.V2
 {
@@ -65,7 +65,8 @@ namespace dotMCLauncher.Profiling.V2
 
         private void AssociateIds()
         {
-            foreach (KeyValuePair<string, LauncherProfile> pair in Profiles) {
+            foreach (KeyValuePair<string, LauncherProfile> pair in Profiles)
+            {
                 pair.Value.AssociatedId = pair.Key;
             }
         }
@@ -77,10 +78,12 @@ namespace dotMCLauncher.Profiling.V2
 
         public void AddProfile(string id, LauncherProfile launcherProfile)
         {
-            if (string.IsNullOrWhiteSpace(id)) {
+            if (string.IsNullOrWhiteSpace(id))
+            {
                 throw new ArgumentNullException(nameof(id));
             }
-            if (Profiles.Keys.Contains(id)) {
+            if (Profiles.Keys.Contains(id))
+            {
                 throw new ArgumentException($"Profile with id '{id}' already exists.");
             }
             launcherProfile.AssociatedId = id;
@@ -94,7 +97,8 @@ namespace dotMCLauncher.Profiling.V2
 
         public void RemoveProfile(string id)
         {
-            if (string.IsNullOrWhiteSpace(id)) {
+            if (string.IsNullOrWhiteSpace(id))
+            {
                 throw new ArgumentNullException(nameof(id));
             }
             Profiles.Remove(id);
@@ -108,8 +112,10 @@ namespace dotMCLauncher.Profiling.V2
         public void ChangeProfileId(string id, string newId)
         {
             Dictionary<string, LauncherProfile> newProfiles = new Dictionary<string, LauncherProfile>();
-            foreach (KeyValuePair<string, LauncherProfile> pair in Profiles) {
-                if (pair.Key != id) {
+            foreach (KeyValuePair<string, LauncherProfile> pair in Profiles)
+            {
+                if (pair.Key != id)
+                {
                     newProfiles.Add(pair.Key, pair.Value);
                     continue;
                 }

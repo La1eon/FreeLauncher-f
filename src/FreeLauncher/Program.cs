@@ -1,9 +1,9 @@
-﻿using System;
+﻿using MLauncher.Forms;
+using System;
 using System.Windows.Forms;
-using FreeLauncher.Forms;
 using Telerik.WinControls;
 
-namespace FreeLauncher
+namespace MLauncher
 {
     internal static class Program
     {

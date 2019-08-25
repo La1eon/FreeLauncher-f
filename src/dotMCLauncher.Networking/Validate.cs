@@ -20,10 +20,13 @@ namespace dotMCLauncher.Networking
 
         public override Request DoPost()
         {
-            try {
+            try
+            {
                 base.DoPost();
                 Valid = true;
-            } catch {
+            }
+            catch
+            {
                 Valid = false;
             }
             return this;

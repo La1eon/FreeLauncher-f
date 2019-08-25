@@ -38,13 +38,13 @@ namespace dotMCLauncher.Networking
             AccessToken = auth.AccessToken;
             Username = auth.SelectedProfile.Name;
             Uuid = auth.SelectedProfile.Id;
-            UserProperties = (JArray) auth.User["properties"];
+            UserProperties = (JArray)auth.User["properties"];
         }
 
         public static Authenticate Login(string email, string password)
         {
             Authenticate auth = new Authenticate(email, password);
-            auth = (Authenticate) auth.DoPost();
+            auth = (Authenticate)auth.DoPost();
             return auth;
         }
 
@@ -62,7 +62,7 @@ namespace dotMCLauncher.Networking
         public Refresh Refresh()
         {
             Refresh refresh = new Refresh(ClientToken, AccessToken);
-            refresh = (Refresh) refresh.DoPost();
+            refresh = (Refresh)refresh.DoPost();
             return refresh;
         }
 
@@ -75,12 +75,13 @@ namespace dotMCLauncher.Networking
         private static bool Validate(string accessToken, string clientToken)
         {
             Validate check = new Validate(accessToken, clientToken);
-            return ((Validate) check.DoPost()).Valid;
+            return ((Validate)check.DoPost()).Valid;
         }
 
         public string GetUsernameByUuid()
         {
-            Username = new Username {
+            Username = new Username
+            {
                 Uuid = Uuid
             }.GetUsernameByUuid();
             return Username;
@@ -96,7 +97,7 @@ namespace dotMCLauncher.Networking
         public static UserInfo GetUserInfo(string username)
         {
             UserInfo inform = new UserInfo(username);
-            inform = (UserInfo) inform.DoPost();
+            inform = (UserInfo)inform.DoPost();
             return inform;
         }
     }

@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace dotMCLauncher.Versioning
 {
@@ -18,10 +18,12 @@ namespace dotMCLauncher.Versioning
         [JsonProperty("minecraftArguments")]
         public string Arguments
         {
-            get {
+            get
+            {
                 return _arguments;
             }
-            set {
+            set
+            {
                 _arguments = value;
                 ArgCollection = new ArgumentCollection();
                 ArgCollection.Parse(value);
@@ -34,25 +36,33 @@ namespace dotMCLauncher.Versioning
         [JsonProperty("arguments")]
         private JObject ArgumentGroups
         {
-            get {
+            get
+            {
                 return ArgGroups != null ? JObject.Parse(JsonConvert.SerializeObject(ArgGroups)) : null;
             }
-            set {
+            set
+            {
                 Type = VersionManifestType.V2;
                 ArgGroups = new List<ArgumentsGroup>();
-                foreach (KeyValuePair<string, JToken> pair in value) {
+                foreach (KeyValuePair<string, JToken> pair in value)
+                {
                     ArgumentsGroup group = new ArgumentsGroup();
                     group.Type = pair.Key.ToUpperInvariant() == "GAME"
                         ? ArgumentsGroupType.GAME
                         : ArgumentsGroupType.JVM;
                     group.Arguments = new List<Argument>();
-                    JArray array = (JArray) pair.Value;
-                    foreach (JToken token in array) {
-                        if (token is JValue) {
-                            group.Arguments.Add(new SingleArgument {
+                    JArray array = (JArray)pair.Value;
+                    foreach (JToken token in array)
+                    {
+                        if (token is JValue)
+                        {
+                            group.Arguments.Add(new SingleArgument
+                            {
                                 Value = token
                             });
-                        } else {
+                        }
+                        else
+                        {
                             ExtendedArgument arg = (ExtendedArgument)
                                 JsonConvert.DeserializeObject(token.ToString(), typeof(ExtendedArgument));
                             group.Arguments.Add(arg);
@@ -158,7 +168,8 @@ namespace dotMCLauncher.Versioning
                 JsonConvert.DeserializeObject(
                     File.ReadAllText(Path.Combine(pathToDirectory.ToString(), version + ".json")),
                     typeof(VersionManifest));
-            if (ver.InheritsFrom == null || !parseInheritableVersion) {
+            if (ver.InheritsFrom == null || !parseInheritableVersion)
+            {
                 return ver;
             }
             ver.InheritableVersionManifest =
@@ -172,22 +183,28 @@ namespace dotMCLauncher.Versioning
         public static bool IsValid(DirectoryInfo pathToDirectory, bool throwsExceptions)
         {
             string version = pathToDirectory.Name;
-            if (!File.Exists(Path.Combine(pathToDirectory.ToString(), version + ".json"))) {
-                if (throwsExceptions) {
+            if (!File.Exists(Path.Combine(pathToDirectory.ToString(), version + ".json")))
+            {
+                if (throwsExceptions)
+                {
                     throw new VersionCorruptedOrNotExists(
-                        $"Directory '{version}' doesn't contain JSON file. Path: {pathToDirectory}") {
+                        $"Directory '{version}' doesn't contain JSON file. Path: {pathToDirectory}")
+                    {
                         Version = version
                     };
                 }
                 return false;
             }
-            VersionManifest ver = (VersionManifest) JsonConvert.DeserializeObject(File.ReadAllText(Path.Combine(pathToDirectory.ToString(), version + ".json")), typeof(VersionManifest));
-            if (ver != null) {
+            VersionManifest ver = (VersionManifest)JsonConvert.DeserializeObject(File.ReadAllText(Path.Combine(pathToDirectory.ToString(), version + ".json")), typeof(VersionManifest));
+            if (ver != null)
+            {
                 return true;
             }
-            if (throwsExceptions) {
+            if (throwsExceptions)
+            {
                 throw new VersionCorruptedOrNotExists(
-                    $"Directory '{version}' contains corrupted JSON file. Path: {pathToDirectory}") {
+                    $"Directory '{version}' contains corrupted JSON file. Path: {pathToDirectory}")
+                {
                     Version = version
                 };
             }
@@ -196,13 +213,17 @@ namespace dotMCLauncher.Versioning
 
         public string GetAssetsIndex()
         {
-            if (!string.IsNullOrEmpty(AssetsIndex)) {
+            if (!string.IsNullOrEmpty(AssetsIndex))
+            {
                 return AssetsIndex;
             }
             VersionManifest manifest = InheritableVersionManifest;
-            while (true) {
-                if (manifest?.InheritsFrom == null) {
-                    if (manifest?.AssetsIndex != null) {
+            while (true)
+            {
+                if (manifest?.InheritsFrom == null)
+                {
+                    if (manifest?.AssetsIndex != null)
+                    {
                         return manifest.AssetsIndex;
                     }
                     break;
@@ -223,7 +244,8 @@ namespace dotMCLauncher.Versioning
             string toReturn = ArgGroups.FirstOrDefault(
                     ag => ag.Type == group)?
                 .ToString(jvmArgumentDictionary, rules.ToArray()) ?? string.Empty;
-            if (InheritableVersionManifest != null && InheritableVersionManifest.Type == VersionManifestType.V2) {
+            if (InheritableVersionManifest != null && InheritableVersionManifest.Type == VersionManifestType.V2)
+            {
                 toReturn = (toReturn == string.Empty ? string.Empty : toReturn + " ") + InheritableVersionManifest.BuildArgumentsByGroup(group, jvmArgumentDictionary, rules);
             }
             return toReturn;

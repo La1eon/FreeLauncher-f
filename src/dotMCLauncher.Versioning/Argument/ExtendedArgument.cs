@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
+using System.Collections.Generic;
 
 namespace dotMCLauncher.Versioning
 {
@@ -15,22 +15,28 @@ namespace dotMCLauncher.Versioning
         [JsonProperty("value")]
         public JToken Value
         {
-            get {
-                if (!HasMultipleArguments) {
+            get
+            {
+                if (!HasMultipleArguments)
+                {
                     return new JValue(Values?[0]);
                 }
                 JArray array = new JArray();
-                foreach (string value in Values) {
+                foreach (string value in Values)
+                {
                     array.Add(value);
                 }
                 return array;
             }
-            set {
+            set
+            {
                 Values = new List<string>();
                 JArray array = value.Type == JTokenType.Array ? value as JArray : new JArray(value);
-                if (array.Count > 1) {
+                if (array.Count > 1)
+                {
                     HasMultipleArguments = true;
-                    foreach (JToken jToken in array) {
+                    foreach (JToken jToken in array)
+                    {
                         Values.Add(jToken.ToString());
                     }
                     return;
@@ -49,12 +55,15 @@ namespace dotMCLauncher.Versioning
 
         public bool IsForWindows()
         {
-            if (_rules == null) {
+            if (_rules == null)
+            {
                 return true;
             }
             bool toReturn = false;
-            foreach (Rule rule in _rules) {
-                switch (rule.Action) {
+            foreach (Rule rule in _rules)
+            {
+                switch (rule.Action)
+                {
                     case "allow":
                         toReturn = (rule.Os == null && rule.Features == null) || rule.Os?.Name == "windows";
                         break;
@@ -70,17 +79,21 @@ namespace dotMCLauncher.Versioning
 
         public bool IsValid(params Rule[] rules)
         {
-            if (rules == null) {
+            if (rules == null)
+            {
                 return true;
             }
             bool toReturn = false;
-            foreach (Rule rule in _rules) {
-                foreach (Rule reqRule in rules) {
+            foreach (Rule rule in _rules)
+            {
+                foreach (Rule reqRule in rules)
+                {
                     if (reqRule.Action == rule.Action &&
                         reqRule.Features?.IsForCustomResolution == rule.Features?.IsForCustomResolution &&
                         reqRule.Features?.IsForDemoUser == rule.Features?.IsForDemoUser &&
                         reqRule.Os?.Name == rule.Os?.Name &&
-                        reqRule.Os?.Version == rule.Os?.Version) {
+                        reqRule.Os?.Version == rule.Os?.Version)
+                    {
                         toReturn = true;
                     }
                 }

@@ -1,4 +1,4 @@
-﻿namespace FreeLauncher.Forms
+﻿namespace MLauncher.Forms
 {
     partial class UpdateForm
     {

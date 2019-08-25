@@ -1,7 +1,7 @@
-﻿using System;
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
+using System;
 
-namespace FreeLauncher
+namespace MLauncher
 {
     internal static class Java
     {
@@ -14,15 +14,19 @@ namespace FreeLauncher
 
         public static string JavaBitInstallation
         {
-            get {
-                if (JavaExecutable == null) {
+            get
+            {
+                if (JavaExecutable == null)
+                {
                     return "null";
                 }
                 if ((_isNotWow6432Installation && !Environment.Is64BitOperatingSystem) ||
-                    (!_isNotWow6432Installation && Environment.Is64BitOperatingSystem)) {
+                    (!_isNotWow6432Installation && Environment.Is64BitOperatingSystem))
+                {
                     return "32";
                 }
-                if (_isNotWow6432Installation && Environment.Is64BitOperatingSystem) {
+                if (_isNotWow6432Installation && Environment.Is64BitOperatingSystem)
+                {
                     return "64";
                 }
                 return "null";
@@ -33,11 +37,15 @@ namespace FreeLauncher
         {
             _isNotWow6432Installation = true;
             string javaKey = "SOFTWARE\\JavaSoft\\Java Runtime Environment";
-            while (true) {
+            while (true)
+            {
                 using (RegistryKey baseKey =
-                    RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64).OpenSubKey(javaKey)) {
-                    if (baseKey == null) {
-                        if (javaKey == "SOFTWARE\\Wow6432Node\\JavaSoft\\Java Runtime Environment") {
+                    RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64).OpenSubKey(javaKey))
+                {
+                    if (baseKey == null)
+                    {
+                        if (javaKey == "SOFTWARE\\Wow6432Node\\JavaSoft\\Java Runtime Environment")
+                        {
                             break;
                         }
                         _isNotWow6432Installation = false;
@@ -46,7 +54,8 @@ namespace FreeLauncher
                     }
                     string currentVersion = baseKey.GetValue("CurrentVersion").ToString();
                     using (RegistryKey homeKey = baseKey.OpenSubKey(currentVersion))
-                        if (homeKey != null) {
+                        if (homeKey != null)
+                        {
                             return homeKey.GetValue("JavaHome").ToString();
                         }
                 }
