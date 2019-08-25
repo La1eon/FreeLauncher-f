@@ -29,6 +29,7 @@ artifacts:
 - path: \src\MLauncher\bin\$(CONFIGURATION)\MLauncher.exe
 
 deploy:
+  appveyor_repo_tag: true;
   provider: GitHub
   auth_token:
     secure: 7cnsqpVwcTuOaXbhv/wDjIFz/4J/9otXf3TqbI3ExgoRU5kwB1JUuqrCrYmkJFXO
