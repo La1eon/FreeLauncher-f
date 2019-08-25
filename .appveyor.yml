@@ -21,12 +21,12 @@ build:
 before_deploy:
 - ps: >-
     if ($env:APPVEYOR_REPO_TAG -eq "true") {
-      Push-AppveyorArtifact .\src\MLauncher\bin\$env:CONFIGURATION\MLauncher.exe -DeploymentName deployment
-      Push-AppveyorArtifact .\src\MLauncher\bin\$env:CONFIGURATION\MLauncher.zip -DeploymentName deployment
+      Push-AppveyorArtifact .\src\FreeLauncher\bin\$env:CONFIGURATION\FreeLauncher.exe -DeploymentName deployment
+      Push-AppveyorArtifact .\src\FreeLauncher\bin\$env:CONFIGURATION\FreeLauncher.zip -DeploymentName deployment
     }
 
 artifacts:
-- path: \src\MLauncher\bin\$(CONFIGURATION)\MLauncher.exe
+- path: \src\FreeLauncher\bin\$(CONFIGURATION)\FreeLauncher.exe
 
 deploy:
   provider: GitHub
