@@ -32,11 +32,9 @@
             this.changelogBox = new System.Windows.Forms.RichTextBox();
             this.goButton = new Telerik.WinControls.UI.RadButton();
             this.cancelButton = new Telerik.WinControls.UI.RadButton();
-            this.supportCheckBox = new Telerik.WinControls.UI.RadCheckBox();
             this.autocheckCheckBox = new Telerik.WinControls.UI.RadCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.goButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cancelButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supportCheckBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.autocheckCheckBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +56,7 @@
             this.goButton.Size = new System.Drawing.Size(152, 24);
             this.goButton.TabIndex = 1;
             this.goButton.Text = "Go to GitHub";
+            this.goButton.ThemeName = "VisualStudio2012Dark";
             this.goButton.Click += new System.EventHandler(this.goButton_Click);
             // 
             // cancelButton
@@ -68,25 +67,17 @@
             this.cancelButton.Size = new System.Drawing.Size(120, 24);
             this.cancelButton.TabIndex = 3;
             this.cancelButton.Text = "Cancel";
-            // 
-            // supportCheckBox
-            // 
-            this.supportCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.supportCheckBox.Location = new System.Drawing.Point(472, 209);
-            this.supportCheckBox.Name = "supportCheckBox";
-            this.supportCheckBox.Size = new System.Drawing.Size(133, 18);
-            this.supportCheckBox.TabIndex = 6;
-            this.supportCheckBox.Text = "Support the developer";
-            this.supportCheckBox.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On;
+            this.cancelButton.ThemeName = "VisualStudio2012Dark";
             // 
             // autocheckCheckBox
             // 
             this.autocheckCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.autocheckCheckBox.Location = new System.Drawing.Point(12, 209);
+            this.autocheckCheckBox.Location = new System.Drawing.Point(138, 235);
             this.autocheckCheckBox.Name = "autocheckCheckBox";
-            this.autocheckCheckBox.Size = new System.Drawing.Size(180, 18);
+            this.autocheckCheckBox.Size = new System.Drawing.Size(183, 18);
             this.autocheckCheckBox.TabIndex = 7;
             this.autocheckCheckBox.Text = "Automatically check for updates";
+            this.autocheckCheckBox.ThemeName = "VisualStudio2012Dark";
             this.autocheckCheckBox.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On;
             // 
             // UpdateForm
@@ -95,7 +86,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(636, 258);
             this.Controls.Add(this.autocheckCheckBox);
-            this.Controls.Add(this.supportCheckBox);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.goButton);
             this.Controls.Add(this.changelogBox);
@@ -110,9 +100,9 @@
             this.RootElement.ApplyShapeToControl = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update checker";
+            this.ThemeName = "VisualStudio2012Dark";
             ((System.ComponentModel.ISupportInitialize)(this.goButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cancelButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supportCheckBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.autocheckCheckBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
@@ -125,7 +115,6 @@
         private System.Windows.Forms.RichTextBox changelogBox;
         private Telerik.WinControls.UI.RadButton goButton;
         private Telerik.WinControls.UI.RadButton cancelButton;
-        private Telerik.WinControls.UI.RadCheckBox supportCheckBox;
         public Telerik.WinControls.UI.RadCheckBox autocheckCheckBox;
     }
 }

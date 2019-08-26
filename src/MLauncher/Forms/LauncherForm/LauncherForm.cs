@@ -1495,7 +1495,7 @@ Please, check for your Internet configuration and restart the launcher.
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
                 WebClient wc = new WebClient();
                 wc.Headers.Add("User-Agent", "request");
-                GitHubRelease latest = JsonConvert.DeserializeObject<GitHubRelease>(wc.DownloadString(new Uri("https://api.github.com/repos/dedepete/MLauncher/releases/latest")));
+                GitHubRelease latest = JsonConvert.DeserializeObject<GitHubRelease>(wc.DownloadString(new Uri("https://api.github.com/repos/dommilosz/MLauncher/releases/latest")));
                 string latestVersion = latest.Tag.Substring(1, latest.Tag.Length - 1),
                        currentVersion = Assembly.GetEntryAssembly().GetName().Version.ToString().Substring(0, Assembly.GetEntryAssembly().GetName().Version.ToString().LastIndexOf(".", StringComparison.Ordinal));
                 AppendLog($"Current version: {currentVersion}");

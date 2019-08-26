@@ -19,7 +19,7 @@ namespace MLauncher.Forms
 
         private void goButton_Click(object sender, EventArgs e)
         {
-            Process.Start((supportCheckBox.Checked ? "http://adf.ly/2268996/" : string.Empty) + @"https://github.com/dedepete/MLauncher/releases/latest");
+            Process.Start(@"https://github.com/dedepete/MLauncher/releases/latest");
         }
 
         private void LoadLocalization()
@@ -27,7 +27,6 @@ namespace MLauncher.Forms
             ApplicationLocalization localization = _configuration.Localization;
 
             cancelButton.Text = localization.Cancel;
-            supportCheckBox.Text = localization.SupportDeveloper;
             autocheckCheckBox.Text = localization.CheckUpdatesCheckBox;
             goButton.Text = localization.GoToGitHub;
         }

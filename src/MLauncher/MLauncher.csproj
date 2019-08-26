@@ -157,10 +157,10 @@
     <Compile Include="Forms\LauncherForm\LauncherForm.designer.cs">
       <DependentUpon>LauncherForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LauncherForm\ModpackForm.cs">
+    <Compile Include="Forms\Modpack\ModpackForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\LauncherForm\ModpackForm.Designer.cs">
+    <Compile Include="Forms\Modpack\ModpackForm.Designer.cs">
       <DependentUpon>ModpackForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ProfileForm\ProfileForm.cs">
@@ -192,7 +192,7 @@
       <DependentUpon>LauncherForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LauncherForm\ModpackForm.resx">
+    <EmbeddedResource Include="Forms\Modpack\ModpackForm.resx">
       <DependentUpon>ModpackForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProfileForm\ProfileForm.resx">
@@ -204,6 +204,12 @@
     <EmbeddedResource Include="Forms\UsersForm\UsersForm.resx">
       <DependentUpon>UsersForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\MLauncher.Forms.LauncherForm.resources" />
+    <EmbeddedResource Include="obj\Debug\MLauncher.Forms.ModpackForm.resources" />
+    <EmbeddedResource Include="obj\Debug\MLauncher.Forms.ProfileForm.resources" />
+    <EmbeddedResource Include="obj\Debug\MLauncher.Forms.UpdateForm.resources" />
+    <EmbeddedResource Include="obj\Debug\MLauncher.Forms.UsersForm.resources" />
+    <EmbeddedResource Include="obj\Debug\MLauncher.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -218,6 +224,44 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="bin\Debug\MLauncher.exe.config" />
+    <None Include="obj\Debug\Costura\17AA45B1880A3206FDCB17364416114FB1F163AA.costura.dotmclauncher.profiling.pdb.compressed" />
+    <None Include="obj\Debug\Costura\1A536997F71581296F16D81A220E0FED57863B83.costura.dotmclauncher.dll.compressed" />
+    <None Include="obj\Debug\Costura\1C673019FCBD1E15EDDCB224C7F055C42950CC7E.costura.telerik.wincontrols.dll.compressed" />
+    <None Include="obj\Debug\Costura\30D8579BA6FEFBD5C2BA4A363353EE7B59F3D427.costura.dotmclauncher.yggdrasil.dll.compressed" />
+    <None Include="obj\Debug\Costura\3A20BA8AE310D8AF6E558D7F9295761A7F566B95.costura.commandline.dll.compressed" />
+    <None Include="obj\Debug\Costura\4746A2DD49AA5B407F73D3C7E58CDE5CE7C572D7.costura.dotmclauncher.pdb.compressed" />
+    <None Include="obj\Debug\Costura\4A4EEC736CE46880F578DF54CBF6C59202105D85.costura.dotmclauncher.resourcing.pdb.compressed" />
+    <None Include="obj\Debug\Costura\583594ECF7F68D0459FD599AD47BBA8202B55B09.costura.dotmclauncher.yggdrasil.pdb.compressed" />
+    <None Include="obj\Debug\Costura\5BC4BBD9D3C59F69FBF52619FFAA90534F7D7AF4.costura.dotmclauncher.versioning.dll.compressed" />
+    <None Include="obj\Debug\Costura\6DEDD9D4C26C1BF3D8A4E50BAEA09876B216BF02.costura.dotmclauncher.profiling.dll.compressed" />
+    <None Include="obj\Debug\Costura\756528065CA25D5E90E67CF6C6AD54B30FDE0F61.costura.dotmclauncher.resourcing.dll.compressed" />
+    <None Include="obj\Debug\Costura\77946E4F6E7EA1B85BBA229610122E7B8CAC7AA5.costura.dotmclauncher.versioning.dll.compressed" />
+    <None Include="obj\Debug\Costura\7A4714FA5E128069624E798E0B70F47584BB64F9.costura.dotmclauncher.profiling.dll.compressed" />
+    <None Include="obj\Debug\Costura\7A855F57741D91C12AEF038AA4F18F259872FF3C.costura.dotnetzip.dll.compressed" />
+    <None Include="obj\Debug\Costura\8A54916761BB1F9DC22F954DA276C4D369407186.costura.telerik.wincontrols.ui.dll.compressed" />
+    <None Include="obj\Debug\Costura\9AFD3F69FEEAB45632EA10897889E4922EA1A3C8.costura.dotmclauncher.yggdrasil.pdb.compressed" />
+    <None Include="obj\Debug\Costura\B7DA9D14A4E4EC0E4C60B634BFEA07E91A5FD4D7.costura.dotnetzip.pdb.compressed" />
+    <None Include="obj\Debug\Costura\C2C10CACE459D70B2590CE339B79DEF3017D7549.costura.dotmclauncher.versioning.pdb.compressed" />
+    <None Include="obj\Debug\Costura\C36FE92A7DDABA5A2B5C5C0B57B86D141923D7CB.costura.dotmclauncher.profiling.pdb.compressed" />
+    <None Include="obj\Debug\Costura\C58A019C68F9C802D33B68851B711C4F18EF2140.costura.dotmclauncher.versioning.pdb.compressed" />
+    <None Include="obj\Debug\Costura\C5F88142AB05B3227D05027C6872C9B495BB7395.costura.telerik.wincontrols.themes.visualstudio2012dark.dll.compressed" />
+    <None Include="obj\Debug\Costura\CBC510520FCD85DBC1C82B02E82040702ACA9B79.costura.newtonsoft.json.dll.compressed" />
+    <None Include="obj\Debug\Costura\D81B08A6C160737CF5F8F078FA56D962EAB125B6.costura.telerikcommon.dll.compressed" />
+    <None Include="obj\Debug\Costura\FC9EA0BA1956CE8278422504667E006B11B8F7EB.costura.dotmclauncher.yggdrasil.dll.compressed" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\MLauncher.csproj.CopyComplete" />
+    <None Include="obj\Debug\MLauncher.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\MLauncher.csproj.Fody.CopyLocal.cache" />
+    <None Include="obj\Debug\MLauncher.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\MLauncher.csprojAssemblyReference.cache" />
+    <None Include="obj\Release\MLauncher.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\x64\Debug\MLauncher.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\x64\Release\MLauncher.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\x86\Debug\MLauncher.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\x86\Debug\MLauncher.csprojAssemblyReference.cache" />
+    <None Include="obj\x86\Release\MLauncher.csproj.CoreCompileInputs.cache" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -291,7 +335,20 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\MLauncher.exe" />
+    <Content Include="bin\Debug\MLauncher.pdb" />
     <Content Include="icon.ico" />
+    <Content Include="obj\Debug\MLauncher.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\MLauncher.exe" />
+    <Content Include="obj\Debug\mlauncher.exe.licenses" />
+    <Content Include="obj\Debug\MLauncher.instr.pdb" />
+    <Content Include="obj\Debug\MLauncher.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="bin\x64\Debug\" />
+    <Folder Include="bin\x64\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
