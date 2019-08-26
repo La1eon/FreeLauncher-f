@@ -104,6 +104,22 @@ namespace MLauncher.Forms
 
         public LauncherForm(Configuration configuration)
         {
+            
+            if (Application.ExecutablePath.Contains("UpdateTmp-1"))
+            {
+                string newpatch = Application.ExecutablePath;
+                try
+                {
+                    File.Delete(Application.StartupPath + newpatch);
+                }
+                catch { }
+                newpatch = newpatch.Replace(".UpdateTmp-1.exe", "");
+                File.Copy(Application.ExecutablePath, newpatch);
+                Process.Start(newpatch);
+                Application.Exit();
+                return;
+            }
+
             if (DesignMode) return;
             _configuration = configuration;
             _nicknameDictionary = new Dictionary<string, Tuple<string, DateTime>>();
@@ -118,6 +134,7 @@ namespace MLauncher.Forms
             Text = $"{ProductName} {ProductVersion}";
             AboutVersion.Text = ProductVersion;
             AppendLog($"Application: {ProductName}");
+            AppendLog($"EXE patch: {Application.ExecutablePath}");
             AppendLog($"Version: {ProductVersion}");
             AppendLog($"Loaded language: {_configuration.Localization.Name}({_configuration.Localization.LanguageTag})");
             AppendLog(new string('=', 12));
