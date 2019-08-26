@@ -119,8 +119,13 @@ namespace MLauncher.Forms
                 Application.Exit();
                 return;
             }
-
             if (DesignMode) return;
+            try
+            {
+                File.Delete(Application.ExecutablePath + ".UpdateTmp-1.exe");
+            }
+            catch { }
+
             _configuration = configuration;
             _nicknameDictionary = new Dictionary<string, Tuple<string, DateTime>>();
             InitializeComponent();
