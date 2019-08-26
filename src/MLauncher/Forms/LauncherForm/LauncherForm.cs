@@ -108,12 +108,12 @@ namespace MLauncher.Forms
             if (Application.ExecutablePath.Contains("UpdateTmp-1"))
             {
                 string newpatch = Application.ExecutablePath;
+                newpatch = newpatch.Replace(".UpdateTmp-1.exe", "");
                 try
                 {
-                    File.Delete(Application.StartupPath + newpatch);
+                    File.Delete(newpatch);
                 }
                 catch { }
-                newpatch = newpatch.Replace(".UpdateTmp-1.exe", "");
                 File.Copy(Application.ExecutablePath, newpatch);
                 Process.Start(newpatch);
                 Application.Exit();
