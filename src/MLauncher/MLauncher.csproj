@@ -314,7 +314,6 @@
       <In>@(AssemblyInfoContent)</In>
       <Out>$([System.Text.RegularExpressions.Regex]::Match($(In), $(Pattern)))</Out>
     </PropertyGroup>
-    <Exec Condition="$(OS) == 'Windows_NT'" Command="..\..\scripts\pre_build.bat $(Out.Remove(0, 28))" />
   </Target>
   <Target Name="AfterBuild">
     <Message Text=" --=== After Build ==--">
